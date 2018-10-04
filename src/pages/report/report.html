@@ -1,0 +1,89 @@
+<!--
+  Generated template for the ReportPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>report</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="sendReport()">
+    <p>How have you been feeling in the last 24 hours? (0 to 10, where 0 = none of the time [poor] and 10 = all of the
+      time [excellent]</p>
+    <ion-item>
+      <ion-label>Q.1 Able to breathe easily</ion-label>
+      <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary">
+        <ion-label range-left>0</ion-label>
+        <ion-label range-right>10</ion-label>
+      </ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-label>Q.2 Been able to enjoy food</ion-label>
+      <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary">
+        <ion-icon small range-left name="sad"></ion-icon>
+        <ion-icon range-right name="happy"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label>Q.3 Feeling rested</ion-label>
+      <ion-select interface="popover">
+        <ion-option value=0>0</ion-option>
+        <ion-option value=1>1</ion-option>
+        <ion-option value=2>2</ion-option>
+        <ion-option value=3>3</ion-option>
+        <ion-option value=4>4</ion-option>
+        <ion-option value=5>5</ion-option>
+        <ion-option value=6>6</ion-option>
+        <ion-option value=7>7</ion-option>
+        <ion-option value=8>8</ion-option>
+        <ion-option value=9>9</ion-option>
+        <ion-option value=10>10</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Q.4 Have had a good sleep</ion-label>
+      <ion-select interface="action-sheet">
+        <ion-option value=0>0</ion-option>
+        <ion-option value=1>1</ion-option>
+        <ion-option value=2>2</ion-option>
+        <ion-option value=3>3</ion-option>
+        <ion-option value=4>4</ion-option>
+        <ion-option value=5>5</ion-option>
+        <ion-option value=6>6</ion-option>
+        <ion-option value=7>7</ion-option>
+        <ion-option value=8>8</ion-option>
+        <ion-option value=9>9</ion-option>
+        <ion-option value=10>10</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Q.5 Able to look after personal toilet and hygiene unaided</ion-label>
+      <ion-select>
+        <ion-option value=0>0</ion-option>
+        <ion-option value=1>1</ion-option>
+        <ion-option value=2>2</ion-option>
+        <ion-option value=3>3</ion-option>
+        <ion-option value=4>4</ion-option>
+        <ion-option value=5>5</ion-option>
+        <ion-option value=6>6</ion-option>
+        <ion-option value=7>7</ion-option>
+        <ion-option value=8>8</ion-option>
+        <ion-option value=9>9</ion-option>
+        <ion-option value=10>10</ion-option>
+      </ion-select>
+    </ion-item>
+
+  </form>
+
+</ion-content>

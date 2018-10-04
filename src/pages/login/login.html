@@ -1,0 +1,35 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title>Inloggning</ion-title>
+  </ion-navbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-segment [(ngModel)]="loginType" color="dark">
+    <ion-segment-button value="BankId">
+      Mobilt Bank ID
+    </ion-segment-button>
+    <ion-segment-button value="UserPass">
+      Lösenord
+    </ion-segment-button>
+
+  </ion-segment>
+ 
+
+  <form (ngSubmit)="login()">
+    <ion-item *ngFor="let item of getItems(loginType)">
+      <ion-label class="font-form-label" floating>{{item.name}}:</ion-label>
+      <ion-input autofocus></ion-input>
+
+    </ion-item>
+
+    <button ion-button block color="secundary" class="marginTop">Log in</button>
+  </form>
+
+
+</ion-content>
