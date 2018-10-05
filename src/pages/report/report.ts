@@ -9,6 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReportPage {
   queryList: Array<object>;
   scale01: Array<object>;
+  id:String;
 
 
 
