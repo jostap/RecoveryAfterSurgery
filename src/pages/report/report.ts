@@ -9,6 +9,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReportPage {
   queryList: Array<object>;
   scale01: Array<object>;
+
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.scale01 = [{value:"0",display:"0"},{value:"1",display:"1"},{value:"2",display:"2"},{value:"3",display:"3"},{value:"4",display:"4"},{value:"5",display:"5"},{value:"6",display:"6"},{value:"7",display:"7"},{value:"8",display:"8"},{value:"9",display:"9"},{value:"10",display:"10"}]
@@ -31,6 +34,26 @@ export class ReportPage {
       {id:"F.15",queryText:"Känner du dig nedstämd eller deprimerad?", ansList:this.scale01}
     ]
   }
+
+
+
+  addClass(id: any) {
+
+      this.id = id;
+  }
+
+
+  public toggleColor(event): void {
+    console.log("Found a box:", event.target.id)
+    this.id = event.target.id
+        // if(friend.ionicNamedColor === 'rank') {
+        //   friend.ionicNamedColor = 'primary'
+        // } else {
+        //   friend.ionicNamedColor = 'rank'
+        // }
+
+      }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
