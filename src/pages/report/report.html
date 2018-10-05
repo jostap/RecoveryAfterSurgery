@@ -19,9 +19,11 @@
     </ion-item>
 
 
-    <ion-item>
-      <ion-label>F.3 Känner du dig utvilad?</ion-label>
-      <ion-select interface="popover">
+
+    <ion-item *ngFor="let item of queryList">
+      <ion-label>{{item.id}} {{item.queryText}}</ion-label>
+       <ion-select interface="popover" >
+         <!-- <ion-option *ngFor="let itemValue of item.ansList" value=0>0</ion-option> -->
         <ion-option value=0>0</ion-option>
         <ion-option value=1>1</ion-option>
         <ion-option value=2>2</ion-option>
@@ -33,211 +35,10 @@
         <ion-option value=8>8</ion-option>
         <ion-option value=9>9</ion-option>
         <ion-option value=10>10</ion-option>
+
       </ion-select>
     </ion-item>
 
-    <ion-item>
-      <ion-label>F.4 Har du kunnat sova?</ion-label>
-      <ion-select interface="action-sheet">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-
-
-    <ion-item>
-      <ion-label>F.5 Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-
-
-
-    <ion-item>
-      <ion-label>F.6 Har du kunnat kommunicera med vänner och familj?</ion-label>
-
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-
-
-    </ion-item>
-
-    <ion-item>
-      <ion-label>F.7 Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.8 Har du kunnat återvända till jobbet eller vanliga hemsysslor?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.9 Känner du dig bekväm och har kontroll på situationen?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.10 Har du en känsla av allmänt välbefinnande?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.11 Känner du måttlig smärta?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.12 Känner du svår smärta?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.13 Känner du av illamående och haft kräkningar?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-
-    <ion-item>
-      <ion-label>F.14 Känner du oro?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.15 Känner du dig nedstämd eller deprimerad?</ion-label>
-      <ion-select interface="popover">
-        <ion-option value=0>0</ion-option>
-        <ion-option value=1>1</ion-option>
-        <ion-option value=2>2</ion-option>
-        <ion-option value=3>3</ion-option>
-        <ion-option value=4>4</ion-option>
-        <ion-option value=5>5</ion-option>
-        <ion-option value=6>6</ion-option>
-        <ion-option value=7>7</ion-option>
-        <ion-option value=8>8</ion-option>
-        <ion-option value=9>9</ion-option>
-        <ion-option value=10>10</ion-option>
-      </ion-select>
-    </ion-item>
 
     <button ion-button block color="secundary" class="marginTop">Send Report</button>
 
