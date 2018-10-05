@@ -4,6 +4,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StatusPage } from '../status/status';
 
+
+
+import { CognigPage } from '../cognig/cognig';
+import { TimePage } from '../time/time';
+
 /**
  * Generated class for the MainmenuPage page.
  *
@@ -17,9 +22,19 @@ import { StatusPage } from '../status/status';
   templateUrl: 'mainmenu.html',
 })
 export class MainmenuPage {
-  tab1root = ReportPage;
-  tab2root = StatusPage;
-  tab3root = ContactPage;
+  tab1root = TimePage;
+  tab2root = ReportPage;
+  tab3root = CognigPage;
+  tab4root = StatusPage;
+  tab5root = ContactPage;
+
+
+
+  // tab1root = ReportPage;
+  // tab2root = StatusPage;
+  // tab3root = ContactPage;
+
+
   //tab4root = SurveyPage;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {

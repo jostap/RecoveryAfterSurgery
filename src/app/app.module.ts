@@ -10,6 +10,10 @@ import { MainmenuPage } from './../pages/mainmenu/mainmenu';
 import { StatusPage } from './../pages/status/status';
 import { ContactPage } from './../pages/contact/contact';
 import { ReportPage } from './../pages/report/report';
+
+import { TimePage } from './../pages/time/time';
+import { CognigPage } from './../pages/cognig/cognig';
+
 import { LoginPage } from './../pages/login/login';
 
 @NgModule({
@@ -20,7 +24,9 @@ import { LoginPage } from './../pages/login/login';
     StatusPage,
     ContactPage,
     ReportPage,
-    LoginPage
+    LoginPage,
+    TimePage,
+    CognigPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +40,9 @@ import { LoginPage } from './../pages/login/login';
     StatusPage,
     ContactPage,
     ReportPage,
-    LoginPage
+    LoginPage,
+    TimePage,
+    CognigPage
   ],
   providers: [
     StatusBar,
