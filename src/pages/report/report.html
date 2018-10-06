@@ -22,11 +22,27 @@
 <ion-item>
   <ion-label>F.3 Känner du dig utvilad?</ion-label>
 </ion-item>
-<div class="buttonContainer">
+<!-- <div class="buttonContainer">
   <button id="row03_{{item.value}}" class="site row03 not_selected" [ngClass]="{'selected': id === item.value }" (click)="addClass(item.value)" *ngFor="let item of scale01">{{item.display}}</button>
-</div>
+</div> -->
+
+
+<ion-grid>
+  <ion-row>
+      <ion-col id="row03_{{item.value}}" class="site row03 not_selected" [ngClass]="{'selected': id === item.value }" (click)="addClass(item.value)" *ngFor="let item of scale01">{{item.display}}
+    </ion-col>
+
+
+  </ion-row>
+</ion-grid>
 
 <hr>
+
+
+
+
+
+
 
     <ion-item *ngFor="let item of queryList">
       <ion-label>{{item.id}} {{item.queryText}}</ion-label>
