@@ -41,7 +41,7 @@ export class ReportPage {
 
 
 
-  addClass(resp: array) {
+  addClass(resp) {
       this.id[resp[1]] = resp[0];
   }
 
