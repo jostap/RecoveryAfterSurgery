@@ -1,8 +1,8 @@
 
 <ion-content padding>
   <form (ngSubmit)="sendReport()">
-    <p class="titleStyle">Hur har du mått de senaste 24 timmarna på en skala 0-10? <br>0 = [dåligt/inget av tiden], 10
-      = [utmärkt/hela tiden]</p>
+    <p class="titleStyle">Hur har du mått de senaste 24 timmarna på en skala 0-10?
+      <br>0 = [dåligt/inget av tiden]<br> 10= [utmärkt/hela tiden]</p>
     <ion-item>
       <ion-label>F.1 Kan du andas lätt?</ion-label>
       <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary">
@@ -22,21 +22,27 @@
 <ion-item>
   <ion-label>F.3 Känner du dig utvilad?</ion-label>
 </ion-item>
-<!-- <div class="buttonContainer">
-  <button id="row03_{{item.value}}" class="site row03 not_selected" [ngClass]="{'selected': id === item.value }" (click)="addClass(item.value)" *ngFor="let item of scale01">{{item.display}}</button>
-</div> -->
-
-
 <ion-grid>
   <ion-row>
-      <ion-col id="row03_{{item.value}}" class="site row03 not_selected" [ngClass]="{'selected': id === item.value }" (click)="addClass(item.value)" *ngFor="let item of scale01">{{item.display}}
+      <ion-col id="row03_{{item.value}}" class="site row03 not_selected"
+      [ngClass]="{'selected': id.row03 === item.value }" (click)="addClass([item.value, 'row03'])"
+      *ngFor="let item of scale01">{{item.display}}
     </ion-col>
-
-
   </ion-row>
 </ion-grid>
-
 <hr>
+
+<ion-item>
+  <ion-label>F.4 Har du kunnat sova?</ion-label>
+</ion-item>
+<ion-grid>
+  <ion-row>
+      <ion-col id="row04_{{item.value}}" class="site row04 not_selected"
+      [ngClass]="{'selected': id.row04 === item.value }" (click)="addClass([item.value, 'row04'])"
+      *ngFor="let item of scale01">{{item.display}}
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
 
 

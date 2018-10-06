@@ -9,7 +9,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class ReportPage {
   queryList: Array<object>;
   scale01: Array<object>;
-  id:String;
+  id:Object;
 
 
 
@@ -21,7 +21,7 @@ export class ReportPage {
       // {id:"F.1",queryText:"Kan du andas lätt", ansList:[0,1,2,3,4,5,6,7,8,9,10]},
       // {id:"F.2",queryText:"Har du kunnat njuta av mat?", ansList:[0,1,2,3,4,5,6,7,8,9,10]},
       //{id:"F.3",queryText:"Känner du dig utvilad?", ansList:this.scale01},
-      {id:"F.4",queryText:"Har du kunnat sova?", ansList:this.scale01},
+      //{id:"F.4",queryText:"Har du kunnat sova?", ansList:this.scale01},
       {id:"F.5",queryText:"Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?", ansList:this.scale01},
       {id:"F.6",queryText:"Har du kunnat kommunicera med vänner och familj?", ansList:this.scale01},
       {id:"F.7",queryText:"Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)?", ansList:this.scale01},
@@ -34,13 +34,15 @@ export class ReportPage {
       {id:"F.14",queryText:"Känner du oro?", ansList:this.scale01},
       {id:"F.15",queryText:"Känner du dig nedstämd eller deprimerad?", ansList:this.scale01}
     ]
+
+    this.id = {row03:99, row04:99};
+
   }
 
 
 
-  addClass(id: any) {
-
-      this.id = id;
+  addClass(resp: array) {
+      this.id[resp[1]] = resp[0];
   }
 
 
