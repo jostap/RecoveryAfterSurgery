@@ -2,21 +2,32 @@
   <form (ngSubmit)="sendReport()">
     <p class="titleStyle">Hur har du mått de senaste 24 timmarna på en skala 0-10?
       <br>0 = [dåligt/inget av tiden]<br> 10= [utmärkt/hela tiden]</p>
-    <ion-item>
-      <ion-label>F.1 Kan du andas lätt?</ion-label>
-      <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary">
-        <ion-label range-left>0</ion-label>
-        <ion-label range-right>10</ion-label>
-      </ion-range>
-    </ion-item>
-    <ion-item>
-      <ion-label>F.2 Har du kunnat njuta av mat?</ion-label>
-      <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary">
-        <ion-icon small range-left name="sad"></ion-icon>
-        <ion-icon range-right name="happy"></ion-icon>
-      </ion-range>
-    </ion-item>
+    <ion-list>
+      <ion-list-header>F.1 Kan du andas lätt?
+        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
 
+        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>F.2 Har du kunnat njuta av mat?
+        <ion-badge color="secondary" item-end>{{f2}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <!-- <ion-label>F.2 Har du kunnat njuta av mat?</ion-label> -->
+        <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="secondary" [(ngModel)]="f2" [ngModelOptions]="{standalone: true}">
+          <ion-icon small range-left name="sad"></ion-icon>
+          <ion-icon range-right name="happy"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-list>
     <ion-item>
       <ion-label>F.3 Känner du dig utvilad?</ion-label>
     </ion-item>

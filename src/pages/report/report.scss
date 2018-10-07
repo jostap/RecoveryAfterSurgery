@@ -24,7 +24,9 @@ ion-label {
   padding-top: 0px !important;
 }
 
-
+ion-list + ion-list {
+  margin-top: 0;
+}
 
 .site {
   text-align: center;

@@ -10,7 +10,7 @@ export class ReportPage {
   queryList: Array<object>;
   scale01: Array<object>;
   id: Object;
-
+  f1: number = 5;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
