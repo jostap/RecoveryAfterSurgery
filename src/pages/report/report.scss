@@ -2,7 +2,7 @@ page-report {
 
   ion-list-header{
     white-space: normal !important;
-    font-family: arial narrow !important;
+    //font-family: arial narrow !important;
     background-color: color($colors,primary-pale) !important;
     text-transform: none !important;
     font-size: 15px !important;
@@ -11,15 +11,15 @@ page-report {
 
   ion-label {
       white-space: normal !important;
-      font-family: arial narrow !important;
+      //font-family: arial narrow !important;
   }
 
 .toolbar-title-md {
-  color: #673ab7 !important;
+  color: color($colors, primary) !important;
 }
 
 .titleStyle{
-  font-family: arial narrow !important;
+  //font-family: arial narrow !important;
   font-size: 4.5vw;
   font-weight: 600;
   text-align: center;
@@ -30,7 +30,7 @@ page-report {
 
 .label-md {
     margin: 13px 8px 0px 0 !important;
-    color: #777777 !important;
+    color:color($colors, dark) !important;
 }
 
 .range-md.range-has-pin {
@@ -46,6 +46,10 @@ ion-list + ion-list {
   text-indent: 0;
 }
 
+ion-item {
+ padding-bottom: 3% !important;
+ padding-top: 3% !important;
+}
 
 .site {
 /*background: -webkit-gradient(linear, left top, left bottom, from(#4eb5e5), to(#389ed5));

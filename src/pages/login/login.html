@@ -29,7 +29,7 @@
 
   <form (ngSubmit)="login()">
     <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
-      <ion-label class="font-form-label" floating>{{item.name}}:</ion-label>
+      <ion-label class="font-form-label" >{{item.name}}:</ion-label>
       <ion-input autofocus></ion-input>
     </ion-item>
 
