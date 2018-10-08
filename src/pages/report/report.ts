@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CognigPage } from '../cognig/cognig';
 
 @IonicPage()
 @Component({
@@ -74,7 +75,6 @@ export class ReportPage {
   }
 
 
-
   addClass(resp) {
     this.id[resp[1]] = resp[0];
   }
@@ -84,8 +84,9 @@ export class ReportPage {
     console.log('ionViewDidLoad ReportPage');
   }
 
-  sendReport() {
-    console.log("Send Report");
+  goToCognigPage() {
+    console.log("Go to Cognig Page");
+    this.navCtrl.push(CognigPage);
   }
 
 }

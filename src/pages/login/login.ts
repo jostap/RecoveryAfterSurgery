@@ -15,17 +15,17 @@ export class LoginPage {
     'BankId': [
       {
         name: 'Personnummer',
-        //focus: 'autofocus'
+        focus: true
       }
     ],
     'UserPass': [
       {
         name: 'Användarnamn',
-        //focus: 'autofocus'
+        focus: true
       },
       {
         name: 'Lösenord',
-        //price: 'OPEN'
+        focus: false
       }
     ]
   };

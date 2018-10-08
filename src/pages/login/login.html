@@ -1,14 +1,20 @@
-<ion-header>
+<!-- <ion-header>
 
   <ion-navbar no-border-bottom>
     <ion-title>Inloggning</ion-title>
   </ion-navbar>
 
 
-</ion-header>
+</ion-header> -->
 
 
 <ion-content padding>
+
+    <div align="center" class="title">
+      
+        <p class="shadow bam">RAS</p>
+        <p class="bdm">Recovery After Surgery</p>
+    </div>
 
   <ion-segment [(ngModel)]="loginType" color="dark">
     <ion-segment-button value="BankId">
@@ -22,13 +28,12 @@
  
 
   <form (ngSubmit)="login()">
-    <ion-item *ngFor="let item of getItems(loginType)">
+    <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
       <ion-label class="font-form-label" floating>{{item.name}}:</ion-label>
       <ion-input autofocus></ion-input>
-
     </ion-item>
 
-    <button ion-button block color="secundary" class="marginTop">Log in</button>
+    <button ion-button block color="primary" class="marginTop">Log in</button>
   </form>
 
 

@@ -4,17 +4,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { StatusPage } from '../status/status';
 
-
-
 import { CognigPage } from '../cognig/cognig';
 import { TimePage } from '../time/time';
 
-/**
- * Generated class for the MainmenuPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
