@@ -7,6 +7,11 @@ page-report {
     text-transform: none !important;
     font-size: 15px !important;
     font-weight: bold !important;
+    
+  }
+
+  ion-range {
+    margin-top: 20px !important;
   }
 
   ion-label {
@@ -47,8 +52,8 @@ ion-list + ion-list {
 }
 
 ion-item {
- padding-bottom: 3% !important;
- padding-top: 3% !important;
+ margin-bottom: 10px !important;
+ margin-top: 10px !important;
 }
 
 .site {
