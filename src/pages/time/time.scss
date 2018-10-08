@@ -2,4 +2,24 @@ page-time {
   .toolbar-title-md {
     color: #673ab7 !important;
   }
+
+  .done{
+    background: #47c35c;
+  }
+
+  .active{
+    background: #673ab7;
+  }
+
+  .missed{
+    background: #e07272;
+  }
+
+
+  .disabled{
+    background: #cbcbd6;
+  }
+
+
+
 }

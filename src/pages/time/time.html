@@ -12,26 +12,18 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
-
     <ion-list >
-
-
-
-      <ion-card *ngFor="let item of timepoints">
-        <ion-item (click)="goToReportPage()"  >
-          <ion-icon name="time" item-start></ion-icon>
-          {{item.tp_display}}
-          <!-- <ion-icon name="arrow-forward" item-right></ion-icon>  -->
-          <ion-icon name="arrow-dropright" item-right></ion-icon>
+      <ion-card *ngFor="let item of timepoints" >
+        <ion-item (click)=goToReportPage(item.tp_status) [ngClass]="item.tp_status" [ngSwitch]="item.tp_status">
+            <ion-icon name="time" item-start></ion-icon>
+            {{item.tp_display}}
+            <ion-icon *ngSwitchCase="'done'" name="checkmark-circle-outline" item-right></ion-icon>
+            <ion-icon *ngSwitchCase="'missed'" name="close-circle" item-right></ion-icon>
+            <ion-icon name="arrow-dropright" item-right></ion-icon>
         </ion-item>
       </ion-card>
-
-
     </ion-list>
-
 
 
 
