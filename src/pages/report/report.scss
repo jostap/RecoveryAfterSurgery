@@ -3,7 +3,7 @@ page-report {
   ion-list-header{
     white-space: normal !important;
     //font-family: arial narrow !important;
-    background-color: color($colors,primary) !important;
+    // background-color: color($colors,primary) !important;
     text-transform: none !important;
     font-size: 15px !important;
     font-weight: bold !important;
@@ -21,6 +21,9 @@ page-report {
 
 .toolbar-title-md {
   color: color($colors, primary) !important;
+  padding-right: 10vw;
+  text-align: right;
+
 }
 
 .titleStyle{
@@ -44,6 +47,8 @@ page-report {
 
 ion-list + ion-list {
   margin-top: 10;
+  border-style: groove;
+  border-radius: 15px;
 }
 
 .site {

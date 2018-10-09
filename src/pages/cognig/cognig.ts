@@ -20,6 +20,7 @@ export class CognigPage {
 
     //console.log("Go to Cognig Page");
     this.navCtrl.pop();
+    this.navCtrl.pop();
     //this.navCtrl.push(timePage);
 
   }

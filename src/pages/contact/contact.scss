@@ -1,5 +1,11 @@
 page-contact {
   .toolbar-title-md {
-    color: #673ab7 !important;
+    color: color($colors, primary) !important;
   }
+
+  .toolbar-title-md {
+        padding-right: 10vw;
+        text-align: right;
+    }
+
 }

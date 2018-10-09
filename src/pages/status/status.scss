@@ -1,5 +1,7 @@
 page-status {
   .toolbar-title-md {
-    color: #673ab7 !important;
+      color: color($colors, primary) !important;
+            padding-right: 10vw;
+            text-align: right;
   }
 }

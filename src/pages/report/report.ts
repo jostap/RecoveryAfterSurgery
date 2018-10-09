@@ -9,6 +9,8 @@ import { CognigPage } from '../cognig/cognig';
 })
 export class ReportPage {
   queryList: Array<object>;
+  queryList_s2: Array<object>;
+  queryList_s3: Array<object>;
   scale01: Array<object>;
   id: Object;
   f1: number = 5;
@@ -53,10 +55,28 @@ export class ReportPage {
     ];
 
     this.queryList = [
-      // {id:"F.1",queryText:"Kan du andas lätt", ansList:[0,1,2,3,4,5,6,7,8,9,10]},
-      // {id:"F.2",queryText:"Har du kunnat njuta av mat?", ansList:[0,1,2,3,4,5,6,7,8,9,10]},
-      //{id:"F.3",queryText:"Känner du dig utvilad?", ansList:this.scale01},
-      //{id:"F.4",queryText:"Har du kunnat sova?", ansList:this.scale01},
+      {id:"F.1",queryText:"Kan du andas lätt", ansList: this.scale01 , interface: ""},
+      {id:"F.2",queryText:"Har du kunnat njuta av mat?", ansList: this.scale01, interface: "popover"},
+      {id:"F.3",queryText:"Känner du dig utvilad?", ansList: this.scale01, interface: "action-sheet" },
+      {id:"F.4",queryText:"Har du kunnat sova?", ansList: this.scale01, interface: "popover" },
+      { id: "F.5", queryText: "Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?", ansList: this.scale01 , interface: ""},
+      // { id: "F.6", queryText: "Har du kunnat kommunicera med vänner och familj?", ansList: this.scale01, interface: "popover" },
+      // { id: "F.7", queryText: "Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)?", ansList: this.scale01, interface: "action-sheet" },
+      // { id: "F.8", queryText: "Har du kunnat återvända till jobbet eller vanliga hemsysslor?", ansList: this.scale01, interface: ""  },
+      // { id: "F.9", queryText: "Känner du dig bekväm och har kontroll på situationen?", ansList: this.scale01, interface: "popover"  },
+      // { id: "F.10", queryText: "Har du en känsla av allmänt välbefinnande?", ansList: this.scale01, interface: "action-sheet"  },
+      // { id: "F.11", queryText: "Känner du måttlig smärta?", ansList: this.scale01, interface: ""  },
+      // { id: "F.12", queryText: "Känner du svår smärta?", ansList: this.scale01, interface: "popover"  },
+      // { id: "F.13", queryText: "Känner du av illamående och haft kräkningar?", ansList: this.scale01, interface: "action-sheet"  },
+      // { id: "F.14", queryText: "Känner du oro?", ansList: this.scale01, interface: ""  },
+      // { id: "F.15", queryText: "Känner du dig nedstämd eller deprimerad?", ansList: this.scale01, interface: "popover"  }
+    ];
+
+    this.queryList_s2 = [
+      {id:"F.1",queryText:"Kan du andas lätt", ansList: this.scale01 , interface: ""},
+      {id:"F.2",queryText:"Har du kunnat njuta av mat?", ansList: this.scale01, interface: "popover"},
+      {id:"F.3",queryText:"Känner du dig utvilad?", ansList: this.scale01, interface: "action-sheet" },
+      {id:"F.4",queryText:"Har du kunnat sova?", ansList: this.scale01, interface: "popover" },
       { id: "F.5", queryText: "Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?", ansList: this.scale01 , interface: ""},
       { id: "F.6", queryText: "Har du kunnat kommunicera med vänner och familj?", ansList: this.scale01, interface: "popover" },
       { id: "F.7", queryText: "Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)?", ansList: this.scale01, interface: "action-sheet" },
@@ -70,7 +90,25 @@ export class ReportPage {
       { id: "F.15", queryText: "Känner du dig nedstämd eller deprimerad?", ansList: this.scale01, interface: "popover"  }
     ];
 
-    this.id = { row03: 99, row04: 99 };
+    this.queryList_s3 = [
+      {id:"F.1",queryText:"Kan du andas lätt", ansList: this.scale01 , interface: ""},
+      {id:"F.2",queryText:"Har du kunnat njuta av mat?", ansList: this.scale01, interface: "popover"},
+      {id:"F.3",queryText:"Känner du dig utvilad?", ansList: this.scale01, interface: "action-sheet" },
+      {id:"F.4",queryText:"Har du kunnat sova?", ansList: this.scale01, interface: "popover" },
+      { id: "F.5", queryText: "Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?", ansList: this.scale01 , interface: ""},
+      { id: "F.6", queryText: "Har du kunnat kommunicera med vänner och familj?", ansList: this.scale01, interface: "popover" },
+      { id: "F.7", queryText: "Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)?", ansList: this.scale01, interface: "action-sheet" },
+      { id: "F.8", queryText: "Har du kunnat återvända till jobbet eller vanliga hemsysslor?", ansList: this.scale01, interface: ""  },
+      { id: "F.9", queryText: "Känner du dig bekväm och har kontroll på situationen?", ansList: this.scale01, interface: "popover"  },
+      { id: "F.10", queryText: "Har du en känsla av allmänt välbefinnande?", ansList: this.scale01, interface: "action-sheet"  },
+      { id: "F.11", queryText: "Känner du måttlig smärta?", ansList: this.scale01, interface: ""  },
+      { id: "F.12", queryText: "Känner du svår smärta?", ansList: this.scale01, interface: "popover"  },
+      { id: "F.13", queryText: "Känner du av illamående och haft kräkningar?", ansList: this.scale01, interface: "action-sheet"  },
+      { id: "F.14", queryText: "Känner du oro?", ansList: this.scale01, interface: ""  },
+      { id: "F.15", queryText: "Känner du dig nedstämd eller deprimerad?", ansList: this.scale01, interface: "popover"  }
+    ];
+
+    this.id = { row10: 99, row11: 99, row12: 99, row13: 99, row14: 99 };
 
   }
 

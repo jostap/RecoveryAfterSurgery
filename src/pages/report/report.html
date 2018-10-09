@@ -11,10 +11,24 @@
 
 <ion-content padding>
   <form (ngSubmit)="goToCognigPage()">
+
     <div class="titleStyle"><p>Hur har du mått de senaste 24 timmarna på en skala 0-10?</p>
       <p>0 = [dåligt/inget av tiden]</p><p> 10 = [utmärkt/hela tiden]</p></div>
+
+
+
+      <ion-item *ngFor="let item of queryList">
+        <ion-label>{{item.id}} {{item.queryText}}</ion-label>
+        <ion-select interface={{item.interface}}>
+          <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
+          </ion-option>
+        </ion-select>
+      </ion-item>
+
+<hr>
+
     <ion-list>
-      <ion-list-header>F.1 Kan du andas lätt?
+      <ion-list-header>{{queryList_s2[5].id}}{{queryList_s2[5].queryText}}
         <ion-badge color="primary" item-end>{{f1}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -27,7 +41,7 @@
     </ion-list>
 
     <ion-list>
-      <ion-list-header>F.2 Har du kunnat njuta av mat?
+      <ion-list-header>{{queryList_s2[6].id}}{{queryList_s2[6].queryText}}
         <ion-badge color="primary" item-end>{{f2}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -38,44 +52,108 @@
         </ion-range>
       </ion-item>
     </ion-list>
+
+    <ion-list>
+      <ion-list-header>{{queryList_s2[7].id}}{{queryList_s2[7].queryText}}
+        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
+        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-list-header>{{queryList_s2[8].id}}{{queryList_s2[8].queryText}}
+        <ion-badge color="primary" item-end>{{f2}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <!-- <ion-label>F.2 Har du kunnat njuta av mat?</ion-label> -->
+        <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary" [(ngModel)]="f2" [ngModelOptions]="{standalone: true}">
+          <ion-icon color="primary" small range-left name="sad"></ion-icon>
+          <ion-icon color="primary" range-right name="happy"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+
+
+
+    <ion-list>
+      <ion-list-header>{{queryList_s2[9].id}}{{queryList_s2[9].queryText}}
+        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
+        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
+          <ion-label range-left>0</ion-label>
+          <ion-label range-right>10</ion-label>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+
+
     <ion-item>
-      <ion-label>F.3 Känner du dig utvilad?</ion-label>
+      <ion-label>{{queryList_s2[10].id}}{{queryList_s2[10].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
-        <ion-col id="row03_{{item.value}}" class="site row03 not_selected" [ngClass]="{'selected': id.row03 === item.value }"
-          (click)="addClass([item.value, 'row03'])" *ngFor="let item of scale01">{{item.display}}
+        <ion-col id="row010_{{item.value}}" class="site row10 not_selected" [ngClass]="{'selected': id.row10 === item.value }"
+          (click)="addClass([item.value, 'row10'])" *ngFor="let item of scale01">{{item.display}}
         </ion-col>
       </ion-row>
     </ion-grid>
-    <hr>
+
 
     <ion-item>
-      <ion-label>F.4 Har du kunnat sova?</ion-label>
+      <ion-label>{{queryList_s2[11].id}}{{queryList_s2[11].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
-        <ion-col id="row04_{{item.value}}" class="site row04 not_selected" [ngClass]="{'selected': id.row04 === item.value }"
-          (click)="addClass([item.value, 'row04'])" *ngFor="let item of scale01">{{item.display}}
+        <ion-col id="row11_{{item.value}}" class="site row11 not_selected" [ngClass]="{'selected': id.row11 === item.value }"
+          (click)="addClass([item.value, 'row11'])" *ngFor="let item of scale01">{{item.display}}
         </ion-col>
       </ion-row>
     </ion-grid>
 
-    <!-- <ion-item>
-      <ion-label>F.5 Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp?</ion-label>
-      <ion-select>
-        <ion-option *ngFor="let item of scale01" value={{itemValue.value}}> {{itemValue.display}}
-        </ion-option>
-      </ion-select>
-    </ion-item> -->
 
-    <ion-item *ngFor="let item of queryList">
-      <ion-label>{{item.id}} {{item.queryText}}</ion-label>
-      <ion-select interface={{item.interface}}>
-        <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
-        </ion-option>
-      </ion-select>
+
+    <ion-item>
+      <ion-label>{{queryList_s2[12].id}}{{queryList_s2[12].queryText}}</ion-label>
     </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col id="row12_{{item.value}}" class="site row12 not_selected" [ngClass]="{'selected': id.row12 === item.value }"
+          (click)="addClass([item.value, 'row12'])" *ngFor="let item of scale01">{{item.display}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+    <ion-item>
+      <ion-label>{{queryList_s2[13].id}}{{queryList_s2[13].queryText}}</ion-label>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col id="row13_{{item.value}}" class="site row13 not_selected" [ngClass]="{'selected': id.row13 === item.value }"
+          (click)="addClass([item.value, 'row13'])" *ngFor="let item of scale01">{{item.display}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-item>
+      <ion-label>{{queryList_s2[14].id}}{{queryList_s2[14].queryText}}</ion-label>
+    </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col id="row14_{{item.value}}" class="site row14 not_selected" [ngClass]="{'selected': id.row14 === item.value }"
+          (click)="addClass([item.value, 'row14'])" *ngFor="let item of scale01">{{item.display}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
 
 
     <button ion-button block color="secundary" class="marginTop">Next</button>
