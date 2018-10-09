@@ -11,9 +11,9 @@
 <ion-content padding>
 
     <div align="center" class="title">
-      
-        <p class="shadow bam">RAS</p>
-        <p class="bdm">Recovery After Surgery</p>
+
+        <p class="shadow bam">RaS</p>
+        <p class="bdm">Recovery after Surgery</p>
     </div>
 
   <ion-segment [(ngModel)]="loginType" color="dark">
@@ -25,7 +25,7 @@
     </ion-segment-button>
 
   </ion-segment>
- 
+
 
   <form (ngSubmit)="login()">
     <ion-item *ngFor="let item of getItems(loginType)" id="rounded">

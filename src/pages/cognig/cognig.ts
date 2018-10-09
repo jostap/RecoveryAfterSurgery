@@ -15,4 +15,14 @@ export class CognigPage {
     console.log('ionViewDidLoad CognigPage');
   }
 
+  submitData() {
+    alert("Tack för din medverkan för 24h-formuläret!")
+
+    //console.log("Go to Cognig Page");
+    this.navCtrl.pop();
+    //this.navCtrl.push(timePage);
+
+  }
+
+
 }

@@ -3,11 +3,11 @@ page-report {
   ion-list-header{
     white-space: normal !important;
     //font-family: arial narrow !important;
-    background-color: color($colors,primary-pale) !important;
+    background-color: color($colors,primary) !important;
     text-transform: none !important;
     font-size: 15px !important;
     font-weight: bold !important;
-    
+
   }
 
   ion-range {
@@ -82,8 +82,7 @@ padding-top: 1vw;
 }
 
 .selected{
-  background: #673ab7;
-
+  background: color($colors, primary);
 }
 
 .site:active {
@@ -100,7 +99,9 @@ padding-top: 1vw;
 
 
 .button-md{
-  background-color: #673ab7 !important;
+  background: color($colors, primary);
+  color: white;
+  /*background-color: #673ab7 !important;*/
   }
 
 

@@ -7,6 +7,8 @@ page-login {
 
     ion-content{
       background-color: color($colors, primary-pale) !important;
+
+
     }
 
     ion-segment {
@@ -22,7 +24,7 @@ page-login {
         -moz-border-radius: 50px !important;
         -webkit-border-radius: 50px !important;
         border-radius: 10px !important;
-        margin-bottom: 5px !important;  
+        margin-bottom: 5px !important;
     }
 
     body {
@@ -38,18 +40,17 @@ page-login {
         width: 50%;
     }
     .shadow {
-      color: color($colors, accent);
-      font-family: Arvo;
-      font-weight: bold;
-      text-shadow:
-        -3px -3px 0 #222,
-        3px -3px 0 #222,
-        -3px 3px 0 #222,
-        3px 3px 0 #222,
-        4px 4px 0 color($colors, dark),
-        5px 5px 0 color($colors, dark),
-        6px 6px 0 color($colors, dark),
-        7px 7px 0 color($colors, dark);
+      color: color($colors, primary);
+      font-family: Arial narrow;
+      // text-shadow:
+      //   -3px -3px 0 #222,
+      //   3px -3px 0 #222,
+      //   -3px 3px 0 #222,
+      //   3px 3px 0 #222,
+      //   4px 4px 0 color($colors, dark),
+      //   5px 5px 0 color($colors, dark),
+      //   6px 6px 0 color($colors, dark),
+      //   7px 7px 0 color($colors, dark);
       line-height: 0.8em;
       letter-spacing: 0.1em;
       transform: scaleY(0.7);
@@ -58,19 +59,18 @@ page-login {
       margin:0;
       text-align: center;
     }
-    
+
     .bdm {
       font-size: 6vw;
-      font-family: Arvo;
-      font-weight: bold;
-      color: color($colors, dark);
+      font-family: Arial narrow;
+      color: color($colors, primary);
     }
     .bam {
-      font-size: 30vw;
+      font-size: 18vw;
     }
 
     .marginTop {
       margin-top: 30px;
     }
-    
+
 }

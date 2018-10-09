@@ -4,20 +4,28 @@ page-time {
   }
 
   .done{
-    background: #47c35c;
+    background: #17d6bb6b;
+    font-style: italic;
+    color: #a0a0a0f2;
   }
 
   .active{
-    background: #673ab7;
+    background: color($colors, primary);
+    color: white;
   }
 
   .missed{
-    background: #e07272;
+    background: #e0e0e06b;
+    font-style: italic;
+    color: #a0a0a0f2;
+
   }
 
 
   .disabled{
-    background: #cbcbd6;
+    background: #e0e0e06b;
+    font-style: italic;
+    color: #a0a0a0f2;
   }
 
 
