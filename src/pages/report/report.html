@@ -1,4 +1,3 @@
-
 <ion-header>
 
   <ion-navbar>
@@ -12,20 +11,26 @@
 <ion-content padding>
   <form (ngSubmit)="goToCognigPage()">
 
-    <div class="titleStyle"><p>Hur har du mått de senaste 24 timmarna på en skala 0-10?</p>
-      <p>0 = [dåligt/inget av tiden]</p><p> 10 = [utmärkt/hela tiden]</p></div>
+  <ion-card color="primary-light" class="titleStyle">
+      <ion-card-title>
+        Hur har du mått de senaste 24 timmarna på en skala 0-10?
+      </ion-card-title>
+      <ion-card-content>
+        <p>0 = [dåligt/inget av tiden]</p>
+        <p> 10 = [utmärkt/hela tiden]</p>
+      </ion-card-content>
 
+    </ion-card>
 
+    <ion-item *ngFor="let item of queryList">
+      <ion-label>{{item.id}} {{item.queryText}}</ion-label>
+      <ion-select interface={{item.interface}}>
+        <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
 
-      <ion-item *ngFor="let item of queryList">
-        <ion-label>{{item.id}} {{item.queryText}}</ion-label>
-        <ion-select interface={{item.interface}}>
-          <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
-          </ion-option>
-        </ion-select>
-      </ion-item>
-
-<hr>
+    <hr>
 
     <ion-list>
       <ion-list-header>{{queryList_s2[5].id}}{{queryList_s2[5].queryText}}
@@ -154,9 +159,7 @@
       </ion-row>
     </ion-grid>
 
-
-
-    <button ion-button block color="secundary" class="marginTop">Next</button>
+    <button ion-button block color="secundary" class="marginTop">Nästa</button>
 
   </form>
 

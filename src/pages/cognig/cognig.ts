@@ -15,7 +15,7 @@ export class CognigPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CognigPage');
-    var activeId = "";
+    var activeId;
     for (var i = 0; i < timepoints.length; i++) {
       if (timepoints[i].tp_status == 'active'){
         activeId = i;
@@ -26,7 +26,7 @@ export class CognigPage {
   }
 
   submitData() {
-    var activeId = "";
+    var activeId;
     for (var i = 0; i < timepoints.length; i++) {
       if (timepoints[i].tp_status == 'active'){
         activeId = i;

@@ -7,7 +7,6 @@ page-report {
     text-transform: none !important;
     font-size: 15px !important;
     font-weight: bold !important;
-
   }
 
   ion-range {
@@ -33,8 +32,12 @@ page-report {
   text-align: center;
   padding-right: 10%;
   padding-bottom: 3%;
+
 }
 
+.marginTop {
+  margin-top: 15px;
+}
 
 .label-md {
     margin: 13px 8px 0px 0 !important;

@@ -16,9 +16,9 @@ import { TimePage } from '../time/time';
 export class MainmenuPage {
   tab1root = TimePage;
   tab2root = ReportPage;
-  tab3root = CognigPage;
-  tab4root = StatusPage;
-  tab5root = ContactPage;
+  //tab3root = CognigPage;
+  tab3root = StatusPage;
+  tab4root = ContactPage;
 
 
 

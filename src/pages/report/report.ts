@@ -124,16 +124,13 @@ export class ReportPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
 
-    var activeId = "";
+    var activeId;
     for (var i = 0; i < timepoints.length; i++) {
       if (timepoints[i].tp_status == 'active'){
         activeId = i;
       }
     }
     this.activeTitle = timepoints[activeId].tp_display
-
-
-
 
   }
 
