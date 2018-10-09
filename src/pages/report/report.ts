@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { CognigPage } from '../cognig/cognig';
+import { timepoints } from './../../shared/global';
+
 
 @IonicPage()
 @Component({
@@ -14,6 +16,7 @@ export class ReportPage {
   scale01: Array<object>;
   id: Object;
   f1: number = 5;
+  activeTitle: String;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -120,6 +123,18 @@ export class ReportPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ReportPage');
+
+    var activeId = "";
+    for (var i = 0; i < timepoints.length; i++) {
+      if (timepoints[i].tp_status == 'active'){
+        activeId = i;
+      }
+    }
+    this.activeTitle = timepoints[activeId].tp_display
+
+
+
+
   }
 
   goToCognigPage() {
