@@ -7,13 +7,34 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Kognitiva tester  {{activeTitle}}</ion-title>
+    <ion-title></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+        <ion-card color="primary-light" class="titleStyle"
+        (click)="showCognicTest($event, item)"
+        *ngFor="let item of cognigList">
+            <ion-card-title>
+
+              {{item.cognicTitle}}
+            </ion-card-title>
+            <ion-card-content>
+
+            </ion-card-content>
+
+          </ion-card>
+
+        <!-- <ion-item *ngFor="let item of cognigList">
+          <ion-label>1 {{item.id}} {{item.queryText}}</ion-label>
+        </ion-item> -->
+
+
+
+
 
 
 

@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+
+/**
+ * Generated class for the CognicTestPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
+@Component({
+  selector: 'page-cognic-test',
+  templateUrl: 'cognic-test.html',
+})
+export class CognicTestPage {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.item = navParams.get('item');
+  }
+
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad CognicTestPage');
+  }
+
+}

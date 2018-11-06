@@ -2,7 +2,7 @@ page-time {
   .toolbar-title-md {
     color: color($colors, primary) !important;
     padding-right: 10vw;
-    text-align: right;    
+    text-align: right;
   }
 
   .done{
@@ -13,22 +13,29 @@ page-time {
 
   .active{
     background: color($colors, primary);
-    color: white;
+    color: black;
   }
 
   .missed{
     background: #e0e0e06b;
     font-style: italic;
     color: #a0a0a0f2;
-
   }
 
 
   .disabled{
     background: #e0e0e06b;
     font-style: italic;
-    color: #a0a0a0f2;
+    color: black;
   }
+
+
+
+.ion-md-close-circle {
+  color:red !important;
+}
+
+
 
 
 

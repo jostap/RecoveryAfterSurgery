@@ -15,6 +15,8 @@ import { TimePage } from './../pages/time/time';
 import { CognigPage } from './../pages/cognig/cognig';
 
 import { LoginPage } from './../pages/login/login';
+import { CognicTestPage } from './../pages/cognic-test/cognic-test';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { LoginPage } from './../pages/login/login';
     ReportPage,
     LoginPage,
     TimePage,
-    CognigPage
+    CognigPage,
+    CognicTestPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,8 @@ import { LoginPage } from './../pages/login/login';
     ReportPage,
     LoginPage,
     TimePage,
-    CognigPage
+    CognigPage,
+    CognicTestPage
   ],
   providers: [
     StatusBar,
