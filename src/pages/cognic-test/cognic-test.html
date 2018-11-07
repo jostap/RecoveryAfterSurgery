@@ -21,30 +21,17 @@
       <ion-card-title>
 
       </ion-card-title>
-
-
+      <h1>{{item.cognicTitle}}</h1>
+      <hr>
 
       <ion-card-content>
-        <ion-item *ngFor="let item2 of item.queryList">
-          
-          <ion-item id="rounded">
-            <ion-label class="form-labels">{{item2.query}}</ion-label>
+        <div *ngFor="let item2 of item.queryList">
+          <ion-item>
+            <ion-label>{{item2.query}}</ion-label>
             <ion-input type="text" ></ion-input>
           </ion-item>
-
-
-
-        </ion-item>
-
-
+        </div>
       </ion-card-content>
-
     </ion-card>
-
-
-
-
-
-
 
 </ion-content>

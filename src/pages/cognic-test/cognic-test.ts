@@ -13,7 +13,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-cognic-test',
   templateUrl: 'cognic-test.html',
 })
+
 export class CognicTestPage {
+  item: Array<object>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.item = navParams.get('item');

@@ -11,6 +11,7 @@ import { CognicTestPage } from './../cognic-test/cognic-test';
 export class CognigPage {
     activeTitle: String;
     cognigList: Array<object>;
+    
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
