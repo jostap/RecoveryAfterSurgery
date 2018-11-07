@@ -12,13 +12,14 @@
 
     <div align="center" class="title">
 
-        <p class="shadow bam">RaS</p>
-        <p class="bdm">Recovery after Surgery</p>
-        <p class="bdm_small">Powered by VizzDAT</p>
+        <div class="shadow bam">RaS</div>
+        <div class="bdm">Recovery after Surgery</div>
 
     </div>
 
+
   <ion-segment [(ngModel)]="loginType" color="dark">
+
     <ion-segment-button value="BankId">
       Mobilt Bank ID
     </ion-segment-button>
@@ -28,15 +29,36 @@
 
   </ion-segment>
 
-
   <form (ngSubmit)="login()">
+
     <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
       <ion-label class="font-form-label" >{{item.name}}:</ion-label>
       <ion-input></ion-input>
     </ion-item>
 
+
+
+
+    <div id="consentMain">
+      <div id="checkboxDiv">
+        <div id="toggles">
+          <input type="checkbox" name="checkbox1" id="checkbox2" class="ios-toggle" />
+          <label for="checkbox2" class="checkbox-label" data-off="" data-on="Ja"></label>
+        </div>
+
+      </div>
+      <div id="consentTextDiv">
+        Jag samtycker och accepterar användar- och integritetsvillkoren.
+      </div>
+
+
+    </div>
+
+
+
     <button ion-button block color="primary" class="marginTop">Log in</button>
   </form>
 
+  <div class="bdm_small">Powered by VizzDAT</div>
 
 </ion-content>

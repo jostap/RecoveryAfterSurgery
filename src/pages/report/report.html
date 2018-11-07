@@ -11,27 +11,26 @@
 
   <ion-card color="primary-light" class="titleStyle">
       <ion-card-title>
-        Hur har du mått de senaste 24 timmarna på en skala 0-10?
+        Hur har du mått <br> de senaste 24 timmarna <br> på en skala 0 - 10?
+
       </ion-card-title>
       <ion-card-content>
-        <p>0 = [dåligt/inget av tiden]</p>
-        <p> 10 = [utmärkt/hela tiden]</p>
+        0 = dåligt/inget av tiden <br>
+        10 = utmärkt/hela tiden
       </ion-card-content>
 
     </ion-card>
 
     <ion-item *ngFor="let item of queryList">
-      <ion-label>{{item.id}} {{item.queryText}}</ion-label>
+      <ion-label class="queryTextMain">{{item.id}} {{item.queryText}}</ion-label>
       <ion-select interface={{item.interface}}>
         <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
         </ion-option>
       </ion-select>
     </ion-item>
 
-    <hr>
-
     <ion-list>
-      <ion-list-header>{{queryList_s2[5].id}}{{queryList_s2[5].queryText}}
+      <ion-list-header class="queryTextMain">{{queryList_s2[5].id}} &nbsp; {{queryList_s2[5].queryText}}
         <ion-badge color="primary" item-end>{{f1}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -43,8 +42,10 @@
       </ion-item>
     </ion-list>
 
+
+
     <ion-list>
-      <ion-list-header>{{queryList_s2[6].id}}{{queryList_s2[6].queryText}}
+      <ion-list-header class="queryTextMain">{{queryList_s2[6].id}} &nbsp; {{queryList_s2[6].queryText}}
         <ion-badge color="primary" item-end>{{f2}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -57,7 +58,7 @@
     </ion-list>
 
     <ion-list>
-      <ion-list-header>{{queryList_s2[7].id}}{{queryList_s2[7].queryText}}
+      <ion-list-header class="queryTextMain">{{queryList_s2[7].id}} &nbsp; {{queryList_s2[7].queryText}}
         <ion-badge color="primary" item-end>{{f1}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -70,7 +71,7 @@
     </ion-list>
 
     <ion-list>
-      <ion-list-header>{{queryList_s2[8].id}}{{queryList_s2[8].queryText}}
+      <ion-list-header class="queryTextMain">{{queryList_s2[8].id}} &nbsp; {{queryList_s2[8].queryText}}
         <ion-badge color="primary" item-end>{{f2}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -85,7 +86,7 @@
 
 
     <ion-list>
-      <ion-list-header>{{queryList_s2[9].id}}{{queryList_s2[9].queryText}}
+      <ion-list-header class="queryTextMain">{{queryList_s2[9].id}} &nbsp; {{queryList_s2[9].queryText}}
         <ion-badge color="primary" item-end>{{f1}}</ion-badge>
       </ion-list-header>
       <ion-item>
@@ -98,8 +99,8 @@
     </ion-list>
 
 
-    <ion-item>
-      <ion-label>{{queryList_s2[10].id}}{{queryList_s2[10].queryText}}</ion-label>
+    <ion-item >
+      <ion-label class="queryTextMain">{{queryList_s2[10].id}} &nbsp; {{queryList_s2[10].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
@@ -111,7 +112,7 @@
 
 
     <ion-item>
-      <ion-label>{{queryList_s2[11].id}}{{queryList_s2[11].queryText}}</ion-label>
+      <ion-label class="queryTextMain">{{queryList_s2[11].id}} &nbsp; {{queryList_s2[11].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
@@ -124,7 +125,7 @@
 
 
     <ion-item>
-      <ion-label>{{queryList_s2[12].id}}{{queryList_s2[12].queryText}}</ion-label>
+      <ion-label class="queryTextMain">{{queryList_s2[12].id}} &nbsp; {{queryList_s2[12].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
@@ -136,7 +137,7 @@
 
 
     <ion-item>
-      <ion-label>{{queryList_s2[13].id}}{{queryList_s2[13].queryText}}</ion-label>
+      <ion-label class="queryTextMain">{{queryList_s2[13].id}} &nbsp; {{queryList_s2[13].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>
@@ -147,7 +148,7 @@
     </ion-grid>
 
     <ion-item>
-      <ion-label>{{queryList_s2[14].id}}{{queryList_s2[14].queryText}}</ion-label>
+      <ion-label class="queryTextMain">{{queryList_s2[14].id}} &nbsp; {{queryList_s2[14].queryText}}</ion-label>
     </ion-item>
     <ion-grid>
       <ion-row>

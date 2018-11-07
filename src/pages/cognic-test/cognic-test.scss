@@ -4,6 +4,7 @@ page-cognic-test {
 .cognicTitle {
   width: 30%;
   float:right;
+
 }
 
 .item-ios {
@@ -11,9 +12,10 @@ page-cognic-test {
   background-color: color($colors, primary-pale) !important;
 }
 
-h1{
-  text-align: center;
-}
 
+.card-title-md {
+  text-align: center !important;
+  font-size: 2rem !important;
+}
 
 }
