@@ -25,6 +25,7 @@ export class ReportdetailsPage {
   f1: number = 5;
   activeTitle: String;
   queryItems: Array<object>;
+  queryItem : Array<object>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.queryItem = navParams.get('item');
