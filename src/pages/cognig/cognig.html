@@ -22,8 +22,13 @@
 
             {{item.cognicTitle}}
             </ion-card-title>
+
             <ion-card-content>
 
+              <div class="statusBar statusCognic notStarted"
+              [ngClass]="{'completed': barItem.resStatus == '1' }"
+              *ngFor="let barItem of item.queryList"></div>
+              
             </ion-card-content>
 
           </ion-card>

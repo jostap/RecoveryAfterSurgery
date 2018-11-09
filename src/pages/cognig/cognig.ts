@@ -11,18 +11,18 @@ import { CognicTestPage } from './../cognic-test/cognic-test';
 export class CognigPage {
     activeTitle: String;
     cognigList: Array<object>;
-    
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.cognigList = [
       {id:"C1",cognicTitle:"Tidsorientering",
        queryList: [
-         {id:"C1_1", id_display:"1", query:"Vilket årtal har vi nu?"},
-         {id:"C1_2", id_display:"2", query:"Vilken årstid har vi nu?"},
-         {id:"C1_3", id_display:"3", query:"Vilken månad har vi nu?"},
-         {id:"C1_4", id_display:"4", query:"Vilken veckodag har vi idag?"},
-         {id:"C1_5", id_display:"5", query:"Vilket datum har vi idag?"}
+         {id:"C1_1", id_display:"1", query:"Vilket årtal har vi nu?", "resStatus":"1"},
+         {id:"C1_2", id_display:"2", query:"Vilken årstid har vi nu?", "resStatus":"1"},
+         {id:"C1_3", id_display:"3", query:"Vilken månad har vi nu?", "resStatus":"0"},
+         {id:"C1_4", id_display:"4", query:"Vilken veckodag har vi idag?", "resStatus":"0"},
+         {id:"C1_5", id_display:"5", query:"Vilket datum har vi idag?", "resStatus":"0"}
        ] }
        ,
 

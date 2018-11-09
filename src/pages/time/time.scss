@@ -6,7 +6,7 @@ page-time {
   }
 
   .done{
-    background: #17d6bb6b;
+    background: color($colors, primary-light) !important;;
     font-style: italic;
     color: #a0a0a0f2;
   }
@@ -30,8 +30,7 @@ page-time {
   }
 
 
-
-.ion-md-close-circle {
+.ion-md-close-circle, .ion-ios-close-circle-outline {
   color:red !important;
 }
 

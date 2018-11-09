@@ -112,9 +112,10 @@ padding-top: 1vw;
   /*background-color: #673ab7 !important;*/
   }
 
-  .card-title-md {
+
+  .card-title-md, .card-title-ios {
     text-align: center !important;
-    font-size: 2rem !important;
+    font-size: 1.8rem !important;
     font-weight: normal !important;
 
   }
@@ -132,6 +133,31 @@ padding-top: 1vw;
     line-height: 1.3 !important;
     font-weight: normal !important;
 }
+
+
+
+.statusBar{
+  width: 4vw;
+  height: 3vw;
+  display: inline-block;
+  border-style: outset;
+  border-radius: 12px;
+}
+
+
+.statusWrapper{
+  width: 95%;
+  margin: 3%
+}
+
+.notStarted{
+  background-color: #e0e0e06b;
+}
+
+.completed{
+  background-color: color($colors, primary) !important;
+}
+
 
 
 }

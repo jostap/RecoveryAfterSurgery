@@ -4,16 +4,49 @@ page-cognig {
   }
 
 
-.toolbar-title-md {
+.toolbar-title-md, .toolbar-title-ios {
       padding-right: 10vw;
       text-align: right;
   }
 
 
-  .card-title-md {
-      text-align: center;
-      font-size: 2rem;
-  }
+
+
+.statusBar{
+  width: 10vw;
+  height: 3vw;
+  display: inline-block;
+  border-style: outset;
+  border-radius: 12px;
+
+}
+
+.notStarted{
+  background-color: #e0e0e06b;
+}
+
+.completed{
+  background-color: color($colors, primary) !important;
+}
+
+
+
+
+
+.card-content-md, .card-content-ios {
+    padding: 5px 16px !important;
+
+}
+
+.card-title-md, .card-title-ios,  {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+
+
+
+
 
 
 
