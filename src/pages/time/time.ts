@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ReportPage } from './../report/report';
-import { timepoints } from './../../shared/global';
+import { surveyList } from './../../shared/global2';
 import { baseURL } from './../../shared/baseurl';
 
 //import {global} from "./global";
@@ -18,11 +18,11 @@ import { baseURL } from './../../shared/baseurl';
   templateUrl: 'time.html',
 })
 export class TimePage {
-  timepoints: Array<object>;
+  surveyList: Array<object>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-      this.timepoints = timepoints
+      this.surveyList = surveyList
 
 //     this.timepoints = [
 //       {
