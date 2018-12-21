@@ -1,21 +1,38 @@
-export var timepoints = [
-      {
-        id: "0", tp_display: "Pre-OP 1", tp_value:"Pre_OP_1", tp_status:"active"
-      },
-      {
-        id: "1", tp_display: "Pre-OP 2", tp_value:"Pre_OP_2", tp_status:"active"
-      },
-      {
-        id: "2", tp_display: "Pre-OP 3", tp_value:"Pre_OP_3", tp_status:"active"
-      },
-      {
-        id: "3", tp_display: "24 h", tp_value:"24_h", tp_status:"disabled"
-      },
-      {
-        id: "4", tp_display: "7 dagar", tp_value:"7_d", tp_status:"disabled"
-      },
-      {
-        id: "5", tp_display: "30 dagar", tp_value:"30_d", tp_status:"disabled"
-      },
-
-]
+ export var scales =
+   {
+     scale_0_10:[
+     {
+       value: "0", display: "0"
+     },
+     {
+       value: "1", display: "1"
+     },
+     {
+       value: "2", display: "2"
+     },
+     {
+       value: "3", display: "3"
+     },
+     {
+       value: "4", display: "4"
+     },
+     {
+       value: "5", display: "5"
+     },
+     {
+       value: "6", display: "6"
+     },
+     {
+       value: "7", display: "7"
+     },
+     {
+       value: "8", display: "8"
+     },
+     {
+       value: "9", display: "9"
+     },
+     {
+       value: "10", display: "10"
+     }
+   ]
+ };

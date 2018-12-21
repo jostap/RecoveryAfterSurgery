@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { CognigPage } from '../cognig/cognig';
-import { timepoints } from './../../shared/global';
+import { scales } from './../../shared/global';
+import { surveyList } from './../../shared/global2';
+
 
 /**
  * Generated class for the ReportdetailsPage page.
@@ -20,52 +22,41 @@ export class ReportdetailsPage {
   queryList: Array<object>;
   queryList_s2: Array<object>;
   queryList_s3: Array<object>;
-  scale01: Array<object>;
   id: Object;
   f1: number = 5;
   activeTitle: String;
   queryItems: Array<object>;
   queryItem : Array<object>;
+  questionnaireIdNum: String;
+  curSurvey: Any;
+  scale_0_10: Array<object>;
+  id: Any;
+
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.queryItem = navParams.get('item');
+
+    this.questionnaireIdNum = navParams.get('questionnaireIdNum');
+    this.curSurvey = surveyList[this.questionnaireIdNum]
+    this.scale_0_10 = scales['scale_0_10']
+
+    this.id = { row_0: 99,
+row_1: 99,
+row_2: 99,
+row_3: 99,
+row_4: 99,
+row_5: 99,
+row_6: 99,
+row_7: 99,
+row_1: 99,
+row_1: 99,
+row11: 99, row12: 99, row13: 99, row14: 99 };
 
 
-        this.scale01 = [
-          {
-            value: "0", display: "0"
-          },
-          {
-            value: "1", display: "1"
-          },
-          {
-            value: "2", display: "2"
-          },
-          {
-            value: "3", display: "3"
-          },
-          {
-            value: "4", display: "4"
-          },
-          {
-            value: "5", display: "5"
-          },
-          {
-            value: "6", display: "6"
-          },
-          {
-            value: "7", display: "7"
-          },
-          {
-            value: "8", display: "8"
-          },
-          {
-            value: "9", display: "9"
-          },
-          {
-            value: "10", display: "10"
-          }
-        ];
+
+    this.queryItem = this.curSurvey.queryList;
+
+
+
 
 
 
@@ -76,12 +67,12 @@ export class ReportdetailsPage {
     console.log('ionViewDidLoad ReportdetailsPage');
 
     var activeId;
-    for (var i = 0; i < timepoints.length; i++) {
-      if (timepoints[i].tp_status == 'active'){
+    for (var i = 0; i < surveyList.length; i++) {
+      if (surveyList[i].tp_status == 'active'){
         activeId = i;
       }
     }
-    this.activeTitle = timepoints[activeId].tp_display
+    this.activeTitle = surveyList[activeId].tp_display
 
 
 
@@ -90,11 +81,30 @@ export class ReportdetailsPage {
 
   addClass(resp) {
     this.id[resp[1]] = resp[0];
+
   }
 
-  goToCognigPage() {
-    console.log("Go to Cognig Page");
-    this.navCtrl.push(CognigPage);
+  // goToCognigPage() {
+  //   console.log("Go to Cognig Page");
+  //   this.navCtrl.push(CognigPage);
+  // }
+
+  submitData() {
+
+    surveyList[this.questionnaireIdNum].tp_status = 'done'
+
+    if (this.questionnaireIdNum + 1 < surveyList.length){
+      surveyList[this.questionnaireIdNum + 1].tp_status = 'active'
+    }
+
+
+    var msg = "Tack för din medverkan i " + surveyList[this.questionnaireIdNum].tp_display + "-formuläret!"
+    alert(msg)
+
+    this.navCtrl.popToRoot()
+
   }
+
+
 
 }

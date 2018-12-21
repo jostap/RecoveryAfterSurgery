@@ -45,10 +45,17 @@ export class TimePage {
 
   }
 
-  goToReportPage(cardStatus){
+  goToReportPage(cardId){
+
+    var cardStatus = surveyList[cardId].tp_status
+
+
     if (cardStatus == 'active') {
-      this.navCtrl.push(ReportPage);
+      this.navCtrl.push(ReportPage, {
+        questionnaireIdNum:cardId
+      })
     }
+
   }
 
 

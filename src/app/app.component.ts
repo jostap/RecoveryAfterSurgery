@@ -6,7 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { Nav, Platform, App } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from './../pages/login/login';
-import { timepoints } from './../shared/global';
+import { surveyList } from './../shared/global2';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -36,11 +37,13 @@ export class MyApp {
 
 
   reset() {
-    timepoints[0].tp_status = 'done'
-    timepoints[1].tp_status = 'missed'
-    timepoints[2].tp_status = 'active'
-    timepoints[3].tp_status = 'disabled'
-    timepoints[4].tp_status = 'disabled'          
+    surveyList[0].tp_status = 'active'
+    surveyList[1].tp_status = 'active'
+    surveyList[2].tp_status = 'active'
+    surveyList[3].tp_status = 'disabled'
+    surveyList[4].tp_status = 'disabled'
+    surveyList[5].tp_status = 'disabled'
+
   }
 
 

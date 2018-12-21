@@ -2,11 +2,11 @@ export var surveyList = [
 
 // Survey 01
     {
-    tp_display: "Pre-OP 1", tp_value:"Pre_OP_1", tp_status:"active",
+    tp_display: "Pre-OP 1 (QoR-15)", tp_value:"Pre_OP_1", tp_status:"active",
     id:"q0",
     id_num:0,
 
-    preText: "Hur har du mått <br> de senaste 24 timmarna <br> på en skala 0 - 10? 0 = dåligt/inget av tiden <br> 10 = utmärkt/hela tiden",
+    preText: "Hur har du mått de senaste 24 timmarna på en skala 0 - 10? 0 = dåligt/inget av tiden 10 = utmärkt/hela tiden",
 
     questionnaire:"QoR-15",
     queryList: [
@@ -109,10 +109,10 @@ export var surveyList = [
 // Survey 02
 {
 id:"q1",
-id_num:0,
-tp_display: "Pre-OP 2", tp_value:"Pre_OP_2", tp_status:"active",
+id_num:1,
+tp_display: "Pre-OP 2 (WHODAS 2.0 12 )", tp_value:"Pre_OP_2", tp_status:"active",
 
-preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna: ",
+preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna? ",
 
 questionnaire:"WHODAS 2.0",
 queryList: [
@@ -225,8 +225,8 @@ queryList: [
 // Survey 03
 {
 id:"q2",
-id_num:0,
-tp_display: "Pre-OP 3", tp_value:"Pre_OP_3", tp_status:"active",
+id_num:2,
+tp_display: "Pre-OP 3 (EQ-5D)", tp_value:"Pre_OP_3", tp_status:"active",
 preText: "Markera vilket påstående som beskriver Ditt hälsotillstånd idag.",
 
 questionnaire:"EQ-5D",
@@ -235,33 +235,33 @@ queryList: [
   {id:"C2_0", id_display:"1", query:"Rörlighet", queryType:[{text:false, list:true, multiSelect:false}],
    alternatives:[
      {display:"Jag går utan svårigheter", value:"0"},
-     {display:"Jag kan gå men med viss svårighet", value:”1"},
-     {display:"Jag är sängliggande ", value:”2"}
+     {display:"Jag kan gå men med viss svårighet", value:"1"},
+     {display:"Jag är sängliggande ", value:"2"}
    ],"resStatus":false, "preValue":null},
 
    {id:"C2_1", id_display:"2", query:"Hygien", queryType:[{text:false, list:true, multiSelect:false}],
     alternatives:[
       {display:"Jag behöver ingen hjälp med min dagliga hygien, mat eller påklädning ", value:"0"},
-      {display:"Jag har vissa problem att tvätta eller klä mig själv", value:”1"},
-      {display:"Jag kan inte tvätta eller klä mig själv", value:”2"}
+      {display:"Jag har vissa problem att tvätta eller klä mig själv", value:"1"},
+      {display:"Jag kan inte tvätta eller klä mig själv", value:"2"}
     ],"resStatus":false, "preValue":null},
     {id:"C2_2", id_display:"3", query:"Huvudsakliga aktiviteter (t ex arbete, studier,  hushållssysslor, familje- och fritidsaktiviteter)", queryType:[{text:false, list:true, multiSelect:false}],
      alternatives:[
        {display:"Jag klarar av mina huvudsakliga aktiviteter", value:"0"},
-       {display:"Jag har vissa problem med att klara av mina huvudsakliga aktiviteter", value:”1"},
-       {display:"Jag klarar inte av mina huvudsakliga aktiviteter", value:”2"}
+       {display:"Jag har vissa problem med att klara av mina huvudsakliga aktiviteter", value:"1"},
+       {display:"Jag klarar inte av mina huvudsakliga aktiviteter", value:"2"}
      ],"resStatus":false, "preValue":null},
      {id:"C2_3", id_display:"4", query:"Smärtor/besvär", queryType:[{text:false, list:true, multiSelect:false}],
       alternatives:[
         {display:"Jag har varken smärtor eller besvär", value:"0"},
-        {display:"Jag har måttliga smärtor eller besvär", value:”1"},
-        {display:"Jag har svåra smärtor eller besvär", value:”2"}
+        {display:"Jag har måttliga smärtor eller besvär", value:"1"},
+        {display:"Jag har svåra smärtor eller besvär", value:"2"}
       ],"resStatus":false, "preValue":null},
       {id:"C2_4", id_display:"5", query:"Oro/nedstämdhet", queryType:[{text:false, list:true, multiSelect:false}],
        alternatives:[
          {display:"Jag är inte orolig eller nedstämd", value:"0"},
-         {display:"Jag är orolig eller nedstämd i viss utsträckning", value:”1"},
-         {display:"Jag är i högsta grad orolig eller nedstämd", value:”2"}
+         {display:"Jag är orolig eller nedstämd i viss utsträckning", value:"1"},
+         {display:"Jag är i högsta grad orolig eller nedstämd", value:"2"}
        ],"resStatus":false, "preValue":null},
        {id:"C2_5", id_display:"6", query:" Markerar hur bra eller dåligt Ditt hälsotillstånd är på skalan 0-100 där 0 är sämsta tänkbara tillstånd och 100 är bästa tänkbara tillstånd, som Du själv bedömer det.", queryType:[{text:false, list:true, multiSelect:false}],
         alternatives:[
@@ -275,11 +275,11 @@ queryList: [
 
 // Survey 04
     {
-    tp_display: "24 h", tp_value:"24_h", tp_status:"disabled",
+    tp_display: "24 h (QoR-15)", tp_value:"24_h", tp_status:"disabled",
     id:"q3",
     id_num:3,
 
-    preText: "Hur har du mått <br> de senaste 24 timmarna <br> på en skala 0 - 10? 0 = dåligt/inget av tiden <br> 10 = utmärkt/hela tiden",
+    preText: "Hur har du mått de senaste 24 timmarna på en skala 0 - 10? 0 = dåligt/inget av tiden 10 = utmärkt/hela tiden",
 
     questionnaire:"QoR-15",
     queryList: [
@@ -383,9 +383,9 @@ queryList: [
 {
 id:"q4",
 id_num:4,
-tp_display: "7 dagar", tp_value:"7_d", tp_status:"disabled",
+tp_display: "7 dagar (WHODAS 2.0 12)", tp_value:"7_d", tp_status:"disabled",
 
-preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna: ",
+preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna? ",
 
 questionnaire:"WHODAS 2.0",
 queryList: [
@@ -499,7 +499,7 @@ queryList: [
 {
 id:"q5",
 id_num:5,
-tp_display: "30 dagar", tp_value:"30_d", tp_status:"disabled",
+tp_display: "30 dagar (EQ-5D)", tp_value:"30_d", tp_status:"disabled",
 preText: "Markera vilket påstående som beskriver Ditt hälsotillstånd idag.",
 
 questionnaire:"EQ-5D",
@@ -508,33 +508,33 @@ queryList: [
   {id:"C2_0", id_display:"1", query:"Rörlighet", queryType:[{text:false, list:true, multiSelect:false}],
    alternatives:[
      {display:"Jag går utan svårigheter", value:"0"},
-     {display:"Jag kan gå men med viss svårighet", value:”1"},
-     {display:"Jag är sängliggande ", value:”2"}
+     {display:"Jag kan gå men med viss svårighet", value:"1"},
+     {display:"Jag är sängliggande ", value:"2"}
    ],"resStatus":false, "preValue":null},
 
    {id:"C2_1", id_display:"2", query:"Hygien", queryType:[{text:false, list:true, multiSelect:false}],
     alternatives:[
       {display:"Jag behöver ingen hjälp med min dagliga hygien, mat eller påklädning ", value:"0"},
-      {display:"Jag har vissa problem att tvätta eller klä mig själv", value:”1"},
-      {display:"Jag kan inte tvätta eller klä mig själv", value:”2"}
+      {display:"Jag har vissa problem att tvätta eller klä mig själv", value:"1"},
+      {display:"Jag kan inte tvätta eller klä mig själv", value:"2"}
     ],"resStatus":false, "preValue":null},
     {id:"C2_2", id_display:"3", query:"Huvudsakliga aktiviteter (t ex arbete, studier,  hushållssysslor, familje- och fritidsaktiviteter)", queryType:[{text:false, list:true, multiSelect:false}],
      alternatives:[
        {display:"Jag klarar av mina huvudsakliga aktiviteter", value:"0"},
-       {display:"Jag har vissa problem med att klara av mina huvudsakliga aktiviteter", value:”1"},
-       {display:"Jag klarar inte av mina huvudsakliga aktiviteter", value:”2"}
+       {display:"Jag har vissa problem med att klara av mina huvudsakliga aktiviteter", value:"1"},
+       {display:"Jag klarar inte av mina huvudsakliga aktiviteter", value:"2"}
      ],"resStatus":false, "preValue":null},
      {id:"C2_3", id_display:"4", query:"Smärtor/besvär", queryType:[{text:false, list:true, multiSelect:false}],
       alternatives:[
         {display:"Jag har varken smärtor eller besvär", value:"0"},
-        {display:"Jag har måttliga smärtor eller besvär", value:”1"},
-        {display:"Jag har svåra smärtor eller besvär", value:”2"}
+        {display:"Jag har måttliga smärtor eller besvär", value:"1"},
+        {display:"Jag har svåra smärtor eller besvär", value:"2"}
       ],"resStatus":false, "preValue":null},
       {id:"C2_4", id_display:"5", query:"Oro/nedstämdhet", queryType:[{text:false, list:true, multiSelect:false}],
        alternatives:[
          {display:"Jag är inte orolig eller nedstämd", value:"0"},
-         {display:"Jag är orolig eller nedstämd i viss utsträckning", value:”1"},
-         {display:"Jag är i högsta grad orolig eller nedstämd", value:”2"}
+         {display:"Jag är orolig eller nedstämd i viss utsträckning", value:"1"},
+         {display:"Jag är i högsta grad orolig eller nedstämd", value:"2"}
        ],"resStatus":false, "preValue":null},
        {id:"C2_5", id_display:"6", query:" Markerar hur bra eller dåligt Ditt hälsotillstånd är på skalan 0-100 där 0 är sämsta tänkbara tillstånd och 100 är bästa tänkbara tillstånd, som Du själv bedömer det.", queryType:[{text:false, list:true, multiSelect:false}],
         alternatives:[

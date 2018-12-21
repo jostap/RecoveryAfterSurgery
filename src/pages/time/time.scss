@@ -1,38 +1,43 @@
 page-time {
-  .toolbar-title-md {
-    color: color($colors, primary) !important;
-    padding-right: 10vw;
-    text-align: right;
+
+
+    .toolbar-title-md {
+      color: color($colors, primary) !important;
+      padding-right: 10vw;
+      text-align: right;
+    }
+
+    .done{
+      // background: color($colors, primary-light) !important;
+      background: #e0e0e06b;
+
+      font-style: italic;
+      color: #a0a0a0f2;
+    }
+
+    .active{
+      background: color($colors, primary);
+      color: white;
+    }
+
+    .missed{
+      background: #e0e0e06b;
+      font-style: italic;
+      color: #a0a0a0f2;
+    }
+
+
+    .disabled{
+      //background: #e0e0e06b;
+      background: white;
+      font-style: italic;
+      color: #a0a0a0f2;
+    }
+
+
+  .ion-md-close-circle, .ion-ios-close-circle-outline {
+    color:red !important;
   }
-
-  .done{
-    background: color($colors, primary-light) !important;;
-    font-style: italic;
-    color: #a0a0a0f2;
-  }
-
-  .active{
-    background: color($colors, primary);
-    color: white;
-  }
-
-  .missed{
-    background: #e0e0e06b;
-    font-style: italic;
-    color: #a0a0a0f2;
-  }
-
-
-  .disabled{
-    background: #e0e0e06b;
-    font-style: italic;
-    color: black;
-  }
-
-
-.ion-md-close-circle, .ion-ios-close-circle-outline {
-  color:red !important;
-}
 
 
 

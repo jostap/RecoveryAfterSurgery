@@ -9,7 +9,7 @@
 <ion-content padding>
     <ion-list >
       <ion-card *ngFor="let item of surveyList" >
-        <ion-item (click)=goToReportPage(item.tp_status) [ngClass]="item.tp_status" [ngSwitch]="item.tp_status">
+        <ion-item (click)=goToReportPage(item.id_num) [ngClass]="item.tp_status" [ngSwitch]="item.tp_status">
             <ion-icon name="time" item-start></ion-icon>
             {{item.tp_display}}
             <ion-icon *ngSwitchCase="'done'" name="checkmark-circle-outline" item-right></ion-icon>

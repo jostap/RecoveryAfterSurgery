@@ -16,149 +16,116 @@
 <ion-content padding>
 
 
-  <form (ngSubmit)="goToCognigPage()">
+  <!-- <form (ngSubmit)="submitData()"> -->
 
-    <ion-item *ngFor="let item of queryItem.queryList">
-      <ion-label class="queryTextMain">{{item.id}} {{item.queryText}}</ion-label>
-      <ion-select interface={{item.interface}}>
-        <ion-option *ngFor="let itemValue of item.ansList" value={{itemValue.value}}> {{itemValue.display}}
-        </ion-option>
-      </ion-select>
+
+      <div *ngFor="let item2 of curSurvey.queryList;let i=index">
+
+
+
+        <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].list">
+          <ion-label class="form-labels queryLabel">{{item2.id_display}}. {{item2.query}}
+           </ion-label>
+
+          <ion-select [(ngModel)]=item2.preValue multiple={{item2.queryType[0].multiSelect}} interface="action-sheet">
+            <div *ngFor="let item3 of item2.alternatives">
+              <ion-option  value="{{item3.value}}">{{ item3.display }}       <ion-icon name="flask"></ion-icon> </ion-option>
+            </div>
+
+          </ion-select>
+        </ion-item>
+
+
+
+        <!-- <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].scalebar">
+          <ion-label class="form-labels">{{item2.id_display}}. {{item2.query}}</ion-label>
+        <ion-grid>
+          <ion-row>
+            <ion-col id="row13_{{item.value}}" class="site row13 not_selected" [ngClass]="{'selected': id.row13 === item.value }"
+              (click)="addClass([item.value, 'row13'])" *ngFor="let item of scale01">{{item.display}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+    </ion-item> -->
+
+
+
+
+
+
+
+     <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].scalebar">
+      <ion-label class="form-labels"> {{item2.id_display}}. {{item2.query}}</ion-label>
     </ion-item>
 
-    <ion-list>
-      <ion-list-header class="queryTextMain">{{queryItem.queryList_s2[5].id}} &nbsp; {{queryItem.queryList_s2[5].queryText}}
-        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
-      </ion-list-header>
-      <ion-item>
-        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
-        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>10</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-list>
 
 
+      <ion-grid *ngIf="item2.queryType[0].scalebar">
+        <ion-row>
+          <ion-col id="ID_{{item.value}}" class="site row13 not_selected"
+             [ngClass]="{'selected': id.row13 === item.value }"
+            (click)="addClass([item.value, 'row13'])" *ngFor="let item of scale_0_10">{{item.display}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-    <ion-list>
-      <ion-list-header class="queryTextMain">{{queryItem.queryList_s2[6].id}} &nbsp; {{queryItem.queryList_s2[6].queryText}}
-        <ion-badge color="primary" item-end>{{f2}}</ion-badge>
-      </ion-list-header>
-      <ion-item>
-        <!-- <ion-label>F.2 Har du kunnat njuta av mat?</ion-label> -->
-        <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary" [(ngModel)]="f2" [ngModelOptions]="{standalone: true}">
-          <ion-icon color="primary" small range-left name="sad"></ion-icon>
-          <ion-icon color="primary" range-right name="happy"></ion-icon>
-        </ion-range>
-      </ion-item>
-    </ion-list>
+      <!-- <ion-select [(ngModel)]=item2.preValue multiple={{item2.queryType[0].multiSelect}} interface="action-sheet">
+        <div *ngFor="let item3 of item2.alternatives">
+          <ion-option  value="{{item3.value}}">{{ item3.display }}       <ion-icon name="flask"></ion-icon> </ion-option>
+        </div> -->
+    <!--
+      </ion-select> -->
 
-    <ion-list>
-      <ion-list-header class="queryTextMain">{{queryItem.queryList_s2[7].id}} &nbsp; {{queryItem.queryList_s2[7].queryText}}
-        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
-      </ion-list-header>
-      <ion-item>
-        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
-        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>10</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-list-header class="queryTextMain">{{queryItem.queryList_s2[8].id}} &nbsp; {{queryItem.queryList_s2[8].queryText}}
-        <ion-badge color="primary" item-end>{{f2}}</ion-badge>
-      </ion-list-header>
-      <ion-item>
-        <!-- <ion-label>F.2 Har du kunnat njuta av mat?</ion-label> -->
-        <ion-range min="0" max="10" step="1" snaps="true" pin="true" color="primary" [(ngModel)]="f2" [ngModelOptions]="{standalone: true}">
-          <ion-icon color="primary" small range-left name="sad"></ion-icon>
-          <ion-icon color="primary" range-right name="happy"></ion-icon>
-        </ion-range>
-      </ion-item>
-    </ion-list>
-
-
-
-    <ion-list>
-      <ion-list-header class="queryTextMain">{{queryItem.queryList_s2[9].id}} &nbsp; {{queryItem.queryList_s2[9].queryText}}
-        <ion-badge color="primary" item-end>{{f1}}</ion-badge>
-      </ion-list-header>
-      <ion-item>
-        <!-- <ion-label>F.1 Kan du andas lätt?</ion-label> -->
-        <ion-range min="0" max="10" step="1" pin="true" color="primary" [(ngModel)]="f1" [ngModelOptions]="{standalone: true}">
-          <ion-label range-left>0</ion-label>
-          <ion-label range-right>10</ion-label>
-        </ion-range>
-      </ion-item>
-    </ion-list>
-
-
-    <!-- <ion-item >
-      <ion-label class="queryTextMain">{{queryItem.queryList_s2[10].id}} &nbsp; {{queryItem.queryList_s2[10].queryText}}</ion-label>
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col id="row10_{{item.value}}" class="site row10 not_selected" [ngClass]="{'selected': id.row10 === item.value }"
-          (click)="addClass([item.value, 'row10'])" *ngFor="let item of scale01">{{item.display}}
-        </ion-col>
-      </ion-row>
-    </ion-grid> -->
+<!-- [ngClass]="{'selected': id.row13 === item.value }" -->
 
 <!--
-    <ion-item>
-      <ion-label class="queryTextMain">{{queryItem.queryList_s2[11].id}} &nbsp; {{queryItem.queryList_s2[11].queryText}}</ion-label>
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col id="row11_{{item.value}}" class="site row11 not_selected" [ngClass]="{'selected': id.row11 === item.value }"
-          (click)="addClass([item.value, 'row11'])" *ngFor="let item of scale01">{{item.display}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>
 
 
 
-    <ion-item>
-      <ion-label class="queryTextMain">{{queryItem.queryList_s2[12].id}} &nbsp; {{queryItem.queryList_s2[12].queryText}}</ion-label>
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col id="row12_{{item.value}}" class="site row12 not_selected" [ngClass]="{'selected': id.row12 === item.value }"
-          (click)="addClass([item.value, 'row12'])" *ngFor="let item of scale01">{{item.display}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-
-    <ion-item>
-      <ion-label class="queryTextMain">{{queryItem.queryList_s2[13].id}} &nbsp; {{queryItem.queryList_s2[13].queryText}}</ion-label>
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col id="row13_{{item.value}}" class="site row13 not_selected" [ngClass]="{'selected': id.row13 === item.value }"
-          (click)="addClass([item.value, 'row13'])" *ngFor="let item of scale01">{{item.display}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-
-    <ion-item>
-      <ion-label class="queryTextMain">{{queryItem.queryList_s2[14].id}} &nbsp; {{queryItem.queryList_s2[14].queryText}}</ion-label>
-    </ion-item>
-    <ion-grid>
-      <ion-row>
-        <ion-col id="row14_{{item.value}}" class="site row14 not_selected" [ngClass]="{'selected': id.row14 === item.value }"
-          (click)="addClass([item.value, 'row14'])" *ngFor="let item of scale01">{{item.display}}
-        </ion-col>
-      </ion-row>
-    </ion-grid> -->
 
 
 
-    <button ion-button block color="secundary" class="marginTop">Nästa</button>
-  </form>
+
+
+        <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].condition_text
+        && item.queryList[item2.conditions[0].index].preValue == item2.conditions[0].value">
+          <ion-label class="form-labels">{{item2.id_display}}. {{item2.query}}</ion-label>
+          <ion-input  type="text" [(ngModel)]=item2.preValue id="{{item2.id}}" value={{item2.preValue}}> </ion-input>
+        </ion-item>
+
+
+        <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].text">
+          <ion-label class="form-labels">{{item2.id_display}}. {{item2.query}}</ion-label>
+          <ion-input  type="text" [(ngModel)]=item2.preValue id="{{item2.id}}" value={{item2.preValue}}> </ion-input>
+        </ion-item>
+
+
+
+        <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].condition
+           && item.queryList[item2.conditions[0].index].preValue == item2.conditions[0].value" >
+          <ion-label class="form-labels">{{item2.id_display}}. {{item2.query}}</ion-label>
+          <ion-input  type="text" [(ngModel)]=item2.preValue id="{{item2.id}}" value={{item2.preValue}}> </ion-input>
+        </ion-item>
+
+
+          <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].staticText">
+            <ion-label class="form-labels">{{item2.id_display}}. {{item2.query}}</ion-label>
+          </ion-item>
+
+
+ -->
+
+
+
+
+
+              </div>
+
+
+
+    <button ion-button block color="secundary"  (click)=submitData() class="marginTop">Skicka</button>
+  <!-- </form> -->
 
 
 
