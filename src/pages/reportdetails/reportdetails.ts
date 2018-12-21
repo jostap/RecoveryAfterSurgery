@@ -50,15 +50,7 @@ row_7: 99,
 row_1: 99,
 row_1: 99,
 row11: 99, row12: 99, row13: 99, row14: 99 };
-
-
-
     this.queryItem = this.curSurvey.queryList;
-
-
-
-
-
 
 
   }
@@ -81,6 +73,8 @@ row11: 99, row12: 99, row13: 99, row14: 99 };
 
   addClass(resp) {
     this.id[resp[1]] = resp[0];
+
+    console.log("id: ", this.id)
 
   }
 

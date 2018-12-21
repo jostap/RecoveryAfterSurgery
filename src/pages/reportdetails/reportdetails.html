@@ -63,9 +63,14 @@
 
       <ion-grid *ngIf="item2.queryType[0].scalebar">
         <ion-row>
-          <ion-col id="ID_{{item.value}}" class="site row13 not_selected"
-             [ngClass]="{'selected': id.row13 === item.value }"
-            (click)="addClass([item.value, 'row13'])" *ngFor="let item of scale_0_10">{{item.display}}
+          <ion-col id="ID_{{item2.id_display}}_{{item.value}}" class="site not_selected"
+
+             [ngClass]="{'selected': id['ID_' + item2.id_display] === item.value }"
+
+            (click)="addClass([item.value, 'ID_' + item2.id_display])"
+
+            *ngFor="let item of scale_0_10">{{item.display}}
+
           </ion-col>
         </ion-row>
       </ion-grid>
