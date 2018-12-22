@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 
 import { CognigPage } from '../cognig/cognig';
 import { scales } from './../../shared/global';
@@ -25,33 +25,26 @@ export class ReportdetailsPage {
   id: Object;
   f1: number = 5;
   activeTitle: String;
+
   queryItems: Array<object>;
   queryItem : Array<object>;
-  questionnaireIdNum: String;
-  curSurvey: Any;
+  questionnaireIdNum: number;
+  curSurvey: any;
   scale_0_10: Array<object>;
-  id: Any;
 
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public alertCtrl: AlertController,
+    public toastCtrl: ToastController
+  ) {
 
     this.questionnaireIdNum = navParams.get('questionnaireIdNum');
     this.curSurvey = surveyList[this.questionnaireIdNum]
     this.scale_0_10 = scales['scale_0_10']
-
-    this.id = { row_0: 99,
-row_1: 99,
-row_2: 99,
-row_3: 99,
-row_4: 99,
-row_5: 99,
-row_6: 99,
-row_7: 99,
-row_1: 99,
-row_1: 99,
-row11: 99, row12: 99, row13: 99, row14: 99 };
+    this.id = {};
     this.queryItem = this.curSurvey.queryList;
-
 
   }
 
@@ -66,15 +59,24 @@ row11: 99, row12: 99, row13: 99, row14: 99 };
     }
     this.activeTitle = surveyList[activeId].tp_display
 
-
-
   }
 
 
-  addClass(resp) {
-    this.id[resp[1]] = resp[0];
+  countResponse(){
+    var response = {answer:0, nonAnswer:0}
+    for (var i = 0; i < this.curSurvey.queryList.length; i++) {
+      if (this.curSurvey.queryList[i].preValue != null){
+        response.answer += 1
+      } else {
+        response.nonAnswer += 1
+      }
+    }
+    return response
+  }
 
-    console.log("id: ", this.id)
+  addClass(resp) {
+    //this.id[resp[1]] = resp[0];
+    surveyList[this.questionnaireIdNum].queryList.find(x => x.id === resp[1]).preValue = resp[0];
 
   }
 
@@ -82,6 +84,45 @@ row11: 99, row12: 99, row13: 99, row14: 99 };
   //   console.log("Go to Cognig Page");
   //   this.navCtrl.push(CognigPage);
   // }
+
+
+checkAnswers()
+{
+  var response =  this.countResponse()
+  if (response.nonAnswer > 0)
+  {
+    let alert = this.alertCtrl.create({
+      title: 'Obesvarade frågor',
+      message: response.nonAnswer + ' frågor är obesvarade, är du säker på att du vill skicka in enkäten?',
+      buttons: [
+        {
+          text: 'Avbryt',
+          role: 'cancel',
+          handler: () => {
+
+            console.log('Cancel clicked');
+            return
+
+          }
+        },
+        {
+          text: 'Skicka',
+          handler: () => {
+            this.submitData();
+
+          }
+        }
+      ]
+    });
+    alert.present();
+
+  } else {
+    this.submitData();
+  }
+
+
+}
+
 
   submitData() {
 
@@ -91,9 +132,18 @@ row11: 99, row12: 99, row13: 99, row14: 99 };
       surveyList[this.questionnaireIdNum + 1].tp_status = 'active'
     }
 
-
     var msg = "Tack för din medverkan i " + surveyList[this.questionnaireIdNum].tp_display + "-formuläret!"
-    alert(msg)
+
+
+    let alert = this.alertCtrl.create({
+      title: 'Bekräftelse',
+      subTitle: msg,
+      buttons: ['Ok']
+    });
+
+    alert.present();
+
+    //alert(msg)
 
     this.navCtrl.popToRoot()
 

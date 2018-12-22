@@ -37,17 +37,12 @@ export class MyApp {
 
 
   reset() {
-    surveyList[0].tp_status = 'active'
-    surveyList[1].tp_status = 'active'
-    surveyList[2].tp_status = 'active'
-    surveyList[3].tp_status = 'disabled'
-    surveyList[4].tp_status = 'disabled'
-    surveyList[5].tp_status = 'disabled'
-
+    for (var i = 0; i < surveyList.length; i++) {
+      if (i < 3) {surveyList[i].tp_status = 'active'}
+      else {surveyList[i].tp_status = 'disabled'}
+      for (var j = 0; j < surveyList[i].queryList.length; j++){
+          surveyList[i].queryList[j].preValue = null
+      }
+    }
   }
-
-
-
-
-
 }

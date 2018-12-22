@@ -21,8 +21,6 @@
 
       <div *ngFor="let item2 of curSurvey.queryList;let i=index">
 
-
-
         <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].list">
           <ion-label class="form-labels queryLabel">{{item2.id_display}}. {{item2.query}}
            </ion-label>
@@ -51,29 +49,39 @@
 
 
 
-
-
-
-
      <ion-item class="rounded" text-wrap *ngIf="item2.queryType[0].scalebar">
       <ion-label class="form-labels"> {{item2.id_display}}. {{item2.query}}</ion-label>
     </ion-item>
 
 
 
-      <ion-grid *ngIf="item2.queryType[0].scalebar">
+    <ion-grid *ngIf="item2.queryType[0].scalebar">
+      <ion-row>
+        <ion-col id="{{item2.id_display}}" class="site not_selected"
+           [ngClass]="{'selected': item.value === item2.preValue }"
+          (click)="addClass([item.value, item2.id])"
+          *ngFor="let item of scale_0_10">{{item.display}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+
+
+      <!-- <ion-grid *ngIf="item2.queryType[0].scalebar">
         <ion-row>
           <ion-col id="ID_{{item2.id_display}}_{{item.value}}" class="site not_selected"
 
              [ngClass]="{'selected': id['ID_' + item2.id_display] === item.value }"
 
-            (click)="addClass([item.value, 'ID_' + item2.id_display])"
-
+            (click)="addClass([item.value, 'ID_' + item2.id_display, item2.id])"
             *ngFor="let item of scale_0_10">{{item.display}}
-
           </ion-col>
         </ion-row>
-      </ion-grid>
+      </ion-grid> -->
+
+
+
 
       <!-- <ion-select [(ngModel)]=item2.preValue multiple={{item2.queryType[0].multiSelect}} interface="action-sheet">
         <div *ngFor="let item3 of item2.alternatives">
@@ -129,7 +137,7 @@
 
 
 
-    <button ion-button block color="secundary"  (click)=submitData() class="marginTop">Skicka</button>
+    <button ion-button block color="secundary"  (click)=checkAnswers() class="marginTop">Skicka</button>
   <!-- </form> -->
 
 

@@ -25,9 +25,18 @@
 
         <div id="statusWrapper" class="statusWrapper">
 
-          <div class="statusBar statusCognic notStarted"
+          <!-- <div class="statusBar statusCognic notStarted"
           [ngClass]="{'completed': barItem.resStatus == '1' }"
-          *ngFor="let barItem of queryList_s2"></div>
+          *ngFor="let barItem of queryList_s2"></div> -->
+
+
+
+          <div class="statusBar statusCognic notStarted"
+          [ngClass]="{'completed': barItem.preValue != null, 'hidden': barItem.barIgnore}"
+          *ngFor="let barItem of curSurvey.queryList">
+
+        </div>
+
 
         </div>
       </ion-card-content>
