@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController, ToastController, Content } from 'ionic-angular';
 
 import { CognigPage } from '../cognig/cognig';
 import { scales } from './../../shared/global';
 import { surveyList } from './../../shared/global2';
+
 
 
 /**
@@ -32,6 +33,8 @@ export class ReportdetailsPage {
   curSurvey: any;
   scale_0_10: Array<object>;
 
+
+  @ViewChild(Content) content: Content;
 
   constructor(
     public navCtrl: NavController,
@@ -76,14 +79,23 @@ export class ReportdetailsPage {
 
   addClass(resp) {
     //this.id[resp[1]] = resp[0];
-    surveyList[this.questionnaireIdNum].queryList.find(x => x.id === resp[1]).preValue = resp[0];
+
+    this.curSurvey.queryList.find(x => x.id === resp[1]).preValue = resp[0];
+    var queryHeight = 85;
+
+    this.scrollToPosition(0, resp[2] * queryHeight, 200)
 
   }
 
-  // goToCognigPage() {
-  //   console.log("Go to Cognig Page");
-  //   this.navCtrl.push(CognigPage);
-  // }
+
+  scrollToPosition(x,y,t) {
+    //this.content.scrollToBottom(10);
+    this.content.scrollTo(x, y, t);
+    //this.content.getFixedElement('#btn_01');
+
+  }
+
+
 
 
 checkAnswers()

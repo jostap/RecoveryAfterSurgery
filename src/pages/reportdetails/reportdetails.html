@@ -57,9 +57,9 @@
 
     <ion-grid *ngIf="item2.queryType[0].scalebar">
       <ion-row>
-        <ion-col id="{{item2.id_display}}" class="site not_selected"
+        <ion-col id="{{item2.id}}" class="site not_selected"
            [ngClass]="{'selected': item.value === item2.preValue }"
-          (click)="addClass([item.value, item2.id])"
+          (click)="addClass([item.value, item2.id, item2.id_display])"
           *ngFor="let item of scale_0_10">{{item.display}}
         </ion-col>
       </ion-row>
@@ -137,7 +137,7 @@
 
 
 
-    <button ion-button block color="secundary"  (click)=checkAnswers() class="marginTop">Skicka</button>
+    <button id="btn_01" ion-button block color="secundary"  (click)=checkAnswers() class="marginTop">Skicka</button>
   <!-- </form> -->
 
 
