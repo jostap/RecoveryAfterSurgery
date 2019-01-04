@@ -83,7 +83,7 @@ export class ReportdetailsPage {
     this.curSurvey.queryList.find(x => x.id === resp[1]).preValue = resp[0];
     var queryHeight = 85;
 
-    this.scrollToPosition(0, resp[2] * queryHeight, 200)
+    this.scrollToPosition(0, resp[2] * queryHeight, 500)
 
   }
 
