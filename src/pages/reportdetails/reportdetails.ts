@@ -33,7 +33,7 @@ export class ReportdetailsPage {
   curSurvey: any;
   scale_0_10: Array<object>;
   scale_10_0: Array<object>;
-  scaleArray: Array<Any>;
+  scaleArray: any;
 
   @ViewChild(Content) content: Content;
 
@@ -45,10 +45,10 @@ export class ReportdetailsPage {
   ) {
 
     this.questionnaireIdNum = navParams.get('questionnaireIdNum');
-    this.curSurvey = surveyList[this.questionnaireIdNum]
-    this.scale_0_10 = scales['scale_0_10']
-    this.scale_10_0 = scales['scale_10_0']
-    this.scaleArray = scales
+    this.curSurvey = surveyList[this.questionnaireIdNum];
+    // this.scale_0_10 = scales['scale_0_10'];
+    // this.scale_10_0 = scales['scale_10_0'];
+    this.scaleArray = scales;
     this.id = {};
     this.queryItem = this.curSurvey.queryList;
 
@@ -97,6 +97,27 @@ export class ReportdetailsPage {
     //this.content.getFixedElement('#btn_01');
 
   }
+
+
+
+  viewHelpText() {
+
+    let toast = this.toastCtrl.create({
+      message: this.curSurvey.helptext,
+      duration: 5000,
+      position: 'middle',
+      cssClass: 'toastMessage',
+      showCloseButton:true,
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
+
+   }
+
 
 
 

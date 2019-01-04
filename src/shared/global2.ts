@@ -7,6 +7,7 @@ export var surveyList = [
     id_num:0,
 
     preText: "Hur har du mått de senaste 24 timmarna på en skala 0 - 10? 0 = dåligt/inget av tiden 10 = utmärkt/hela tiden",
+    helptext: "Hjälptext QoR-15 \n\n Ange svar genom att trycka på respektive siffra som bäst motsvarar respektive fråga \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 
     questionnaire:"QoR-15",
     queryList: [
@@ -115,7 +116,7 @@ id_num:1,
 tp_display: "Pre-OP 2 (WHODAS 2.0 12 )", tp_value:"Pre_OP_2", tp_status:"active",
 
 preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna? ",
-
+helptext: "Hjälptext WHODAS 2.0 12 \n\n Ange svar genom att trycka på respektive fråga och markera det mest passande alternativet i listan \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 questionnaire:"WHODAS 2.0",
 queryList: [
 
@@ -234,7 +235,7 @@ id:"q2",
 id_num:2,
 tp_display: "Pre-OP 3 (EQ-5D)", tp_value:"Pre_OP_3", tp_status:"active",
 preText: "Markera vilket påstående som beskriver Ditt hälsotillstånd idag.",
-
+helptext: "Hjälptext EQ-5D \n\n Ange svar genom att trycka på respektive fråga och markera det mest passande alternativet i listan \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 questionnaire:"EQ-5D",
 queryList: [
 
@@ -286,6 +287,7 @@ queryList: [
     id_num:3,
 
     preText: "Hur har du mått de senaste 24 timmarna på en skala 0 - 10? 0 = dåligt/inget av tiden 10 = utmärkt/hela tiden",
+    helptext: "Hjälptext QoR-15 \n\n Ange svar genom att trycka på respektive siffra som bäst motsvarar respektive fråga \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 
     questionnaire:"QoR-15",
     queryList: [
@@ -391,6 +393,7 @@ id_num:4,
 tp_display: "7 dagar (WHODAS 2.0 12)", tp_value:"7_d", tp_status:"disabled",
 
 preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under de senaste 30 dagarna? ",
+helptext: "Hjälptext WHODAS 2.0 12 \n\n Ange svar genom att trycka på respektive fråga och markera det mest passande alternativet i listan \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 
 questionnaire:"WHODAS 2.0",
 queryList: [
@@ -506,7 +509,7 @@ id:"q5",
 id_num:5,
 tp_display: "30 dagar (EQ-5D)", tp_value:"30_d", tp_status:"disabled",
 preText: "Markera vilket påstående som beskriver Ditt hälsotillstånd idag.",
-
+helptext: "Hjälptext EQ-5D \n\n Ange svar genom att trycka på respektive fråga och markera det mest passande alternativet i listan \n\n Avsluta enkäten genom att trycka på den blåa knappen 'Skicka' längst ned \n\n Ifyllda svar sparas automatiskt och det går att återkomma till en ej skickad enkät vid ett senare tillfälle",
 questionnaire:"EQ-5D",
 queryList: [
 
