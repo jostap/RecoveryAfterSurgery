@@ -32,7 +32,8 @@ export class ReportdetailsPage {
   questionnaireIdNum: number;
   curSurvey: any;
   scale_0_10: Array<object>;
-
+  scale_10_0: Array<object>;
+  scaleArray: Array<Any>;
 
   @ViewChild(Content) content: Content;
 
@@ -46,6 +47,8 @@ export class ReportdetailsPage {
     this.questionnaireIdNum = navParams.get('questionnaireIdNum');
     this.curSurvey = surveyList[this.questionnaireIdNum]
     this.scale_0_10 = scales['scale_0_10']
+    this.scale_10_0 = scales['scale_10_0']
+    this.scaleArray = scales
     this.id = {};
     this.queryItem = this.curSurvey.queryList;
 

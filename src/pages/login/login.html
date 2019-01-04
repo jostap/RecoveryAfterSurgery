@@ -12,53 +12,73 @@
 
     <div align="center" class="title">
 
-        <div class="shadow bam">RaS</div>
+        <div class="shadow bam">RALP</div>
         <div class="bdm">Recovery after Surgery</div>
 
     </div>
 
 
-  <ion-segment [(ngModel)]="loginType" color="dark">
 
-    <ion-segment-button value="BankId">
-      Mobilt Bank ID
-    </ion-segment-button>
-    <ion-segment-button value="UserPass">
-      Lösenord
-    </ion-segment-button>
 
-  </ion-segment>
+      <ion-segment [(ngModel)]="loginType" color="dark">
 
-  <form (ngSubmit)="login()">
+        <!-- <ion-segment-button value="BankId">
+          Mobilt Bank ID
+        </ion-segment-button> -->
 
-    <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
-      <ion-label class="font-form-label" >{{item.name}}:</ion-label>
-      <ion-input></ion-input>
-    </ion-item>
+
+        <ion-segment-button value="UserPass">
+          Lösenord
+        </ion-segment-button>
+
+      </ion-segment>
 
 
 
+      <!-- <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
+          <ion-label class="font-form-label">{{item.displayName}}:</ion-label>
+          <ion-input type={{item.fieldType}} formControlName={{item.name}} clearInput></ion-input>
+        </ion-item>
 
-    <div id="consentMain">
-      <div id="checkboxDiv">
-        <div id="toggles">
-          <input type="checkbox" name="checkbox1" id="checkbox2" class="ios-toggle" />
-          <label for="checkbox2" class="checkbox-label" data-off="" data-on="Ja"></label>
+        <button ion-button block color="primary" [disabled]="!loginForm.valid" class="marginTop">Log In</button>
+      </form> -->
+
+
+
+
+
+
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+        <ion-item *ngFor="let item of getItems(loginType)" id="rounded">
+          <ion-label class="font-form-label">{{item.name}}:</ion-label>
+          <ion-input type={{item.fieldType}} formControlName={{item.name}} clearInput></ion-input>
+        </ion-item>
+
+
+
+
+        <div id="consentMain">
+          <div id="checkboxDiv">
+            <div id="toggles">
+              <input type="checkbox" name="checkbox1" id="checkbox2" class="ios-toggle" />
+              <label for="checkbox2" class="checkbox-label" data-off="" data-on="Ja"></label>
+            </div>
+
+          </div>
+          <div id="consentTextDiv">
+            Jag samtycker till användar- och integritetsvillkoren.
+          </div>
+
+
         </div>
 
-      </div>
-      <div id="consentTextDiv">
-        Jag samtycker och accepterar användar- och integritetsvillkoren.
-      </div>
 
 
-    </div>
+        <button ion-button block color="primary" class="marginTop">Log in</button>
+      </form>
 
-
-
-    <button ion-button block color="primary" class="marginTop">Log in</button>
-  </form>
-
-  <div class="bdm_small">Powered by VizzDAT</div>
+      <div class="bdm_small">Powered by VizzDAT</div>
 
 </ion-content>

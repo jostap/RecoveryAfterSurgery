@@ -18,6 +18,12 @@ import { LoginPage } from './../pages/login/login';
 import { CognicTestPage } from './../pages/cognic-test/cognic-test';
 import { ReportdetailsPage } from './../pages/reportdetails/reportdetails';
 
+import { IonicStorageModule } from '@ionic/storage';
+
+import { UserProvider } from '../providers/user/user';
+import { ProcessHttpmsgProvider } from '../providers/process-httpmsg/process-httpmsg';
+import { HttpModule } from '@angular/http';
+import { SurveyProvider } from '../providers/survey/survey';
 
 
 @NgModule({
@@ -36,7 +42,10 @@ import { ReportdetailsPage } from './../pages/reportdetails/reportdetails';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot(),
+    HttpModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -55,7 +64,10 @@ import { ReportdetailsPage } from './../pages/reportdetails/reportdetails';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UserProvider,
+    ProcessHttpmsgProvider,
+    SurveyProvider
   ]
 })
 export class AppModule {}

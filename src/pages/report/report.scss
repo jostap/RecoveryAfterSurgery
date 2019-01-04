@@ -140,8 +140,6 @@ padding-top: 1vw;
   width: 4vw;
   height: 3vw;
   display: inline-block;
-  border-style: outset;
-  border-radius: 12px;
 }
 
 
@@ -151,12 +149,25 @@ padding-top: 1vw;
 }
 
 .notStarted{
-  background-color: #e0e0e06b;
+  background-color: #adadad6b;  
 }
 
 .completed{
   background-color: color($colors, primary) !important;
 }
+
+.statusBarContainer{
+  border-width: 2px;
+  border-style:inset;
+
+}
+
+.buttonCard{
+  margin-left: 5%;
+}
+
+
+
 
 
 

@@ -30,18 +30,25 @@
           *ngFor="let barItem of queryList_s2"></div> -->
 
 
+        <!-- <div class="statusBarContainer"> -->
+            <div class="statusBar statusCognic notStarted"
+            [ngClass]="{'completed': barItem.preValue != null, 'hidden': barItem.barIgnore}"
+            *ngFor="let barItem of curSurvey.queryList">
+          </div>
+        <!-- </div> -->
 
-          <div class="statusBar statusCognic notStarted"
-          [ngClass]="{'completed': barItem.preValue != null, 'hidden': barItem.barIgnore}"
-          *ngFor="let barItem of curSurvey.queryList">
 
         </div>
 
+        <button id="btn_01" ion-button block color="secundary"   class="marginTop buttonCard">Besvara enkät</button>
 
-        </div>
+
       </ion-card-content>
 
     </ion-card>
+
+
+
 
 
 

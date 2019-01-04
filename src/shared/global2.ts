@@ -14,91 +14,93 @@ export var surveyList = [
       {id:"C1_00", id_display:"1",
       query:"Kan du andas lätt (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
+
       },
       {id:"C1_01", id_display:"2",
       query:"Har du kunnat njuta av mat? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
+
       {id:"C1_02", id_display:"3",
       query:"Känner du dig utvilad? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_03", id_display:"4",
       query:"Har du kunnat sova? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_04", id_display:"5",
       query:"Har du kunnat gå på toaletten och tagit hand om personlig hygien utan hjälp? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_05", id_display:"6",
       query:"Har du kunnat kommunicera med vänner och familj? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_06", id_display:"7",
       query:"Har du tagit stöd av sjukvårdspersonal (sjuksköterskor, läkare)? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_07", id_display:"8",
       query:"Har du kunnat återvända till jobbet eller vanliga hemsysslor? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_08", id_display:"9",
       query:"Känner du dig bekväm och har kontroll på situationen? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_09", id_display:"10",
       query:"Har du en känsla av allmänt välbefinnande? (0 = inget av tiden, 10 = hela tiden)",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_0_10",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_10", id_display:"11",
       query:"Känner du måttlig smärta? (10 = inget av tiden (utmärkt), 0 = hela tiden (dåligt))",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_10_0",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_11", id_display:"12",
       query:"Känner du svår smärta? (10 = inget av tiden (utmärkt), 0 = hela tiden (dåligt))",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_10_0",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_12", id_display:"13",
       query:"Känner du av illamående och haft kräkningar? (10 = inget av tiden (utmärkt), 0 = hela tiden (dåligt))",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_10_0",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_13", id_display:"14",
       query:"Känner du oro? (10 = inget av tiden (utmärkt), 0 = hela tiden (dåligt))",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_10_0",
       alternatives:[], "resStatus":false, "preValue":null
       },
       {id:"C1_14", id_display:"15",
       query:"Känner du dig nedstämd eller deprimerad? (10 = inget av tiden (utmärkt), 0 = hela tiden (dåligt))",
       queryType:[{text:false, list:false, staticText:false, multiSelect:false, condition:false, condition_text:false, scalebar:true}],
-      conditions:[], barIgnore:false,
+      conditions:[], barIgnore:false, scaleList:"scale_10_0",
       alternatives:[], "resStatus":false, "preValue":null
       },
 
@@ -117,7 +119,8 @@ preText: "Vilken svårighet har du haft på grund av ditt hälsotillstånd under
 questionnaire:"WHODAS 2.0",
 queryList: [
 
-  {id:"C2_0", id_display:"S1", query:"Att stå under längre perioder såsom 30 minuter? ", queryType:[{text:false, list:true, multiSelect:false}],
+  {id:"C2_0", id_display:"S1", query:"Att stå under längre perioder såsom 30 minuter? ",
+  queryType:[{text:false, list:true, multiSelect:false, condition_disabled:false}],
    alternatives:[
      {display:"Ingen", value:"0"},
      {display:"Liten", value:"1"},
@@ -205,7 +208,8 @@ queryList: [
                {display:"Stor", value:"3"},
                {display:"Extrem / Kan inte", value:"4"}
              ],"resStatus":false, "preValue":null},
-             {id:"C2_11", id_display:"S1", query:"Ditt dagliga arbete eller studier?", queryType:[{text:false, list:true, multiSelect:false}],
+             {id:"C2_11", id_display:"S1", query:"Ditt dagliga arbete eller studier?",
+             queryType:[{text:false, list:true, multiSelect:false}],
               alternatives:[
                 {display:"Ingen", value:"0"},
                 {display:"Liten", value:"1"},
@@ -216,7 +220,9 @@ queryList: [
 
               {id:"C2_12", id_display:"H1", query:"Allt sammantaget, hur många av de senaste 30 dagarna har du haft dessa svårigheter? ", queryType:[{text:true, list:false, multiSelect:false}],"resStatus":false, "preValue":null},
               {id:"C2_13", id_display:"H2", query:"Hur många av de senaste 30 dagarna var du helt oförmögen att genomföra dina vanliga aktiviteter eller ditt arbete på grund av ditt hälsotillstånd? ", queryType:[{text:true, list:false, multiSelect:false}],"resStatus":false, "preValue":null},
-              {id:"C2_14", id_display:"H3", query:"Om man inte räknar de dagar du var helt oförmögen, hur många av de senaste 30 dagarna skar du ned på eller minskade på dina vanliga aktiviteter eller ditt arbete på grund av ditt hälsotillstånd? ", queryType:[{text:true, list:false, multiSelect:false}],"resStatus":false, "preValue":null},
+              {id:"C2_14", id_display:"H3",
+              query:"Om man inte räknar de dagar du var helt oförmögen, hur många av de senaste 30 dagarna skar du ned på eller minskade på dina vanliga aktiviteter eller ditt arbete på grund av ditt hälsotillstånd? ",
+              queryType:[{text:true, list:false, multiSelect:false}],"resStatus":false, "preValue":null},
 
 
 ]

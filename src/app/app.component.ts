@@ -7,6 +7,10 @@ import { Nav, Platform, App } from 'ionic-angular';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from './../pages/login/login';
 import { surveyList } from './../shared/global2';
+import { Storage } from '@ionic/storage';
+import { UserProvider } from './../providers/user/user';
+
+
 
 
 @Component({
@@ -15,21 +19,58 @@ import { surveyList } from './../shared/global2';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
   rootPage:any = LoginPage;
+  errMess:Object;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen  ) {
+
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public storage: Storage,
+    public app: App,
+    private userService: UserProvider,
+    public splashScreen: SplashScreen
+
+  ) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
       //this.timepoints = timepoints
+
+
+
+
+
+
     });
   }
 
   logout() {
 
+    console.log('[INFO] ...... Utloggad ');
+    this.storage.get('token').then(token => {
+      let headerArgument = "Bearer " + token;
+      //let headerArgument = "Bearer 2a9041ee6f1bae312e5fcdd16b159f";
+      this.userService.logoutUser(headerArgument)
+      .subscribe(res => {
+        console.log('[INFO] ...... res', res);
+      }, (errmess) => {
+        this.errMess = <any>errmess;
+        console.log('[ERROR] ...... Logout ERROR', this.errMess);
+      });
+    });
+
+    this.storage.remove('token');
+    //this.storage.remove('study');
     this.nav.setRoot(LoginPage);
-    this.nav.popToRoot()
+    const root = this.app.getRootNav();
+    root.popToRoot();
+
+
+
+    // this.nav.setRoot(LoginPage);
+    // this.nav.popToRoot()
 
     //const root = this.app.getRootNav();
     //root.popToRoot();
